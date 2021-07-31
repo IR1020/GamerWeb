@@ -2,17 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::get('/', 'App\Http\Controllers\TopPageController@get');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/touroku', 'App\Http\Controllers\TourokuController@get');
+Route::post('/touroku', 'App\Http\Controllers\TourokuController@post');
+
+Route::get('/login', 'App\Http\Controllers\LoginController@get');
+Route::post('/login', 'App\Http\Controllers\LoginController@post');
+
+Route::get('/mypage', 'App\Http\Controllers\MyPageController@get');
+
+Route::get('/chat', 'App\Http\Controllers\ChatController@get');
+
+Route::get('/chat_room', 'App\Http\Controllers\ChatRoomController@get');

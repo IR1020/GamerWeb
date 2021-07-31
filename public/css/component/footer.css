@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+footer{
+    background-color: rgb(245, 245, 245);
+    position:absolute;
+    width: 100%;
+    line-height: 20px;
+    margin-bottom:0px;
+    left:0px;
+}
+
+.footer{
+    color: #007bff;
+    /* color:rgba(0, 89, 255, 0.74); */
+    text-align:center;
+}
