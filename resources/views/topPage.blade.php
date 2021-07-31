@@ -13,7 +13,7 @@
 
     <div class="TopDescription">
         <div class="DescriptionName">
-            <h1 class="DescriptionName">TalkTownとは？</h1>
+            <h1 class="DescriptionName">GamerWebとは？</h1>
             <p class="Description">登録無しで気軽に話せるコミュニティサイト！<br>
                 ユーザー登録すれば、SNSを使えます。</p>
         </div>

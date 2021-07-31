@@ -7,11 +7,8 @@ header{
     line-height: 20px;
 }
 
-h1.siteName{
-    color: #007bff;
-    /* color:rgba(0, 89, 255, 0.74); */
-    font-size: 30px;
-    margin-inline-start: 50px;
+img.SiteName{
+    margin-left: 20px;
 }
 
 ul.headerList{

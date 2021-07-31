@@ -5,6 +5,6 @@
 
 <form action="user-search" method="post">
             @csrf
-            <input type="search" placeholder="名前を入力">
+            <input type="search" placeholder="キーワードを入力">
             <input type="submit" value="検索">
         </form>

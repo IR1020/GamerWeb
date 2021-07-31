@@ -15,7 +15,6 @@ class ChatRoomController extends Controller
         $b="b";
         $c=$a.$b;
         print($c);
-        
     }
 
     public function post(Request $request)

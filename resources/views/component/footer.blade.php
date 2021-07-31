@@ -5,5 +5,5 @@
 
 <br><br><br>
 <footer>
-    <p class="footer">TalkTown</p>
+    <p class="footer">GamerWeb</p>
 </footer>
