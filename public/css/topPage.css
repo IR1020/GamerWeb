@@ -9,7 +9,6 @@ body {
 .TopDescription{
     padding-top:130px;
     color: #007bff;
-    /* color: rgb(64, 120, 153); */
     display: flex;
     justify-content: center;
 }
@@ -27,6 +26,7 @@ h1.DescriptionName{
 p.Description{
     color: black;
     font-size: 18px;
+    white-space: nowrap;
 }
 
 .ServiceMenu{
@@ -36,9 +36,10 @@ p.Description{
     margin-top: 100px;
 }
 
-.btn01 {
+.btn {
     display: flex;
     justify-content: center;
+    width: 300px;
     text-decoration:none;
     background-color: #3169d1;
     color: #fff !important;
@@ -46,6 +47,6 @@ p.Description{
     border-radius: 50px;
 }
 
-.btn01:hover {
+.btn:hover {
     background-color: #6096fa;
 }

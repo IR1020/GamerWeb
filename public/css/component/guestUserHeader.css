@@ -7,26 +7,28 @@ header{
     line-height: 20px;
 }
 
+.HeaderElement{
+    display: flex;
+    justify-content: space-around;
+}
+
 img.SiteName{
     margin-left: 20px;
 }
 
-ul.headerList{
-    position:absolute;
-    top:0px;
+ul.EntryElement{
+    display: flex;
     list-style:none;
+    top:0px;
     right:2%;
 }
 
-li#headerList{
-    float:left;
-    overflow:hidden;
-    margin-top:3px;
-    margin-left:30px;
-    
+li.EntryItem{
+    white-space: nowrap;
+    margin-left: 25px;
 }
 
-a#headerList{
+a.Url{
     color:rgb(80, 80, 80);
     font-size: 17px;
     font-weight:bold;
@@ -35,8 +37,8 @@ a#headerList{
     cursor: pointer;
 }
 
-a#headerList::before,
-a#headerList::after {
+a.Url::before,
+a.Url::after {
   width: 0;
   height: 1px;
   background-color: #333;
@@ -45,6 +47,6 @@ a#headerList::after {
   transform: translateX(-50%);
 }
 
-a#headerList:hover{
+a.Url:hover{
     color: #8f8f8f;
 }

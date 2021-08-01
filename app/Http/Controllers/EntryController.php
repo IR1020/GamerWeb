@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User\User;
 //use App\Models\Flag;
 
-class TourokuController extends Controller
+class EntryController extends Controller
 {
     public function get()
     {

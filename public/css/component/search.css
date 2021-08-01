@@ -1,0 +1,16 @@
+div.SearchElement{
+    align-items: flex-end;
+}
+
+p.SearchElementMessage{
+    color: #0049e6;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 7px;
+}
+
+form{
+    display: flex;
+    margin-top: -15px;
+}

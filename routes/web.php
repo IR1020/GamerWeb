@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\TopPageController@get');
 
-Route::get('/touroku', 'App\Http\Controllers\TourokuController@get');
-Route::post('/touroku', 'App\Http\Controllers\TourokuController@post');
+Route::get('/entry', 'App\Http\Controllers\EntryController@get');
+Route::post('/entry', 'App\Http\Controllers\EntryController@post');
 
 Route::get('/login', 'App\Http\Controllers\LoginController@get');
 Route::post('/login', 'App\Http\Controllers\LoginController@post');

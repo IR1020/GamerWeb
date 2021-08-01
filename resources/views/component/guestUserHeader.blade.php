@@ -4,18 +4,21 @@
 </head>
 
 <header>
+    <div class="HeaderElement">
+        <img class="SiteName" src="../public/img/logo01.png" width="200" height="50" alt="logo01">
 
-    @component('component.search')
-    @endcomponent
+        <!-- 検索バー -->
+        @component('component.search')
+        @endcomponent
 
-    <img class="SiteName" src="../public/img/logo01.png" width="200" height="50" alt="logo01">
+        <ul class="EntryElement">
+            <li class="EntryItem">
+                <a class="Url" href="{{ url('/entry') }}">新規登録</a>
+            </li>
 
-    <ul class="headerList">
-        <li id="headerList">
-            <a id="headerList" href="{{ url('/touroku') }}">新規登録</a>
-        </li>
-        <li id="headerList">
-            <a id="headerList" href="{{ url('/touroku') }}">ログイン</a>
-        </li>
-    </ul>
+            <li class="EntryItem">
+                <a class="Url" href="{{ url('/login') }}">ログイン</a>
+            </li>
+        </ul>
+    </div>
 </header>
