@@ -3,7 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>トップページ</title>
+    
+    <title>
+        トップページ
+    </title>
+    
     <link rel="stylesheet" href="../public/css/topPage.css">
 </head>
 

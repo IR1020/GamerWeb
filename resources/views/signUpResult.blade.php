@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    
     <title>
         ユーザー登録完了画面
     </title>

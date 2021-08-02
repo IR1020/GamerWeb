@@ -15,39 +15,30 @@ class LoginController extends Controller
 
     public function post(Request $request)
     {
-        $this->validate($request,[
-            'name'=>'required',
-            'pass'=>'required',
+        $this->validate($request, [
+            'name' => 'required',
+            'pass' => 'required',
         ]);
-        
-        $name=$request->input('name');
-        $pass=$request->input('pass');
 
-        $user=new User();
-        $id=User::where('name',$name)->where('pass',$pass)->value('id');
+        $name = $request->input('name');
+        $pass = $request->input('pass');
+
+        $user = new User();
+        $id = User::where('name', $name)->where('pass', $pass)->value('id');
         // print "$id";
-        if($id==null){$isFlag=0;}
-        else{$isFlag=1;}
-        print "$isFlag";
-        $flag=new Flag($isFlag);
-        return view('loginResult', compact('flag'));
-        
-        
-        $user->User($id,$name,$pass);
-
-        if ($user->userCheck($name, $pass) == true) {
-            $id = $user->generateId();
-            $user->tableInsert($id, $name, $pass);
-
-            $user->User($id, $name, $pass);
-            $number = new Number(0);
-            $request->session('number', $number);
-            $request->session('user', $user);
-            return view('loginResult', compact('user', 'number'));
+        if ($id != null) {
+            $isFlag = true;
+        } else {
+            $isFlag = false;
         }
-        $number = new Number(1);
-        $request->session('number', $number);
+
+        $flag = new Flag($isFlag);
+        $request->session('flag', $flag);
+
+        $user->User($id, $name, $pass);
         $request->session('user', $user);
-        return view('loginResult', compact('user', 'number'));
+        // print($user->getId());
+
+        return view('loginResult', compact('user', 'flag'));
     }
 }

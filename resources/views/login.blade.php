@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    
     <title>
         ログイン画面
     </title>
@@ -12,6 +13,12 @@
     <h1>
         SNS名(ログイン画面)
     </h1>
+    
+    @foreach ($errors->all() as $error)
+    <li>
+        {{$error}}
+    </li>
+    @endforeach
 
     <p>
         ユーザー名とパスワードを入力してください。
