@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User\User;
-use App\Models\Number;
+use App\Models\User;
+use App\Models\Flag;
 
 class LoginController extends Controller
 {
@@ -17,13 +17,23 @@ class LoginController extends Controller
     {
         $this->validate($request,[
             'name'=>'required',
-            'pass'=>'required|unique:users,pass',
+            'pass'=>'required',
         ]);
         
         $name=$request->input('name');
         $pass=$request->input('pass');
 
         $user=new User();
+        $id=User::where('name',$name)->where('pass',$pass)->value('id');
+        // print "$id";
+        if($id==null){$isFlag=0;}
+        else{$isFlag=1;}
+        print "$isFlag";
+        $flag=new Flag($isFlag);
+        return view('loginResult', compact('flag'));
+        
+        
+        $user->User($id,$name,$pass);
 
         if ($user->userCheck($name, $pass) == true) {
             $id = $user->generateId();
