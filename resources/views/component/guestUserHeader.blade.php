@@ -11,12 +11,12 @@
         @component('component.search')
         @endcomponent
 
-        <ul class="EntryElement">
-            <li class="EntryItem">
-                <a class="Url" href="{{ url('/entry') }}">新規登録</a>
+        <ul class="SignUpElement">
+            <li class="Item">
+                <a class="Url" href="{{ url('/sign-up') }}">新規登録</a>
             </li>
 
-            <li class="EntryItem">
+            <li class="Item">
                 <a class="Url" href="{{ url('/login') }}">ログイン</a>
             </li>
         </ul>

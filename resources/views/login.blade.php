@@ -3,19 +3,35 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>ログイン画面</title>
+    <title>
+        ログイン画面
+    </title>
 </head>
 
 <body>
-    <h1>SNS名(ログイン画面)</h1>
-    <p>ユーザー名とパスワードを入力してください。</p>
+    <h1>
+        SNS名(ログイン画面)
+    </h1>
+
+    <p>
+        ユーザー名とパスワードを入力してください。
+    </p>
 
     <form action="login" method="post">
         @csrf
-        <p>ユーザー名:<input type="text" name="name"></p>
-        <p>パスワード:<input type="password" name="pass"></p>
-        <p><input type="submit" value="ログイン"><br></p>
+        <p>
+            ユーザー名:
+        </p>
+
+        <input type="text" name="name">
+
+        <p>
+            パスワード:
+        </p>
+
+        <input type="password" name="pass">
+
+        <input type="submit" value="ログイン">
     </form>
 </body>
-
 </html>

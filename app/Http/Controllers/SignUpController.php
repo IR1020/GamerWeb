@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 use App\Models\User\User;
 //use App\Models\Flag;
 
-class EntryController extends Controller
+class SignUpController extends Controller
 {
     public function get()
     {
-        return view('touroku');
+        return view('signUp');
     }
 
     public function post(Request $request)
@@ -19,12 +19,13 @@ class EntryController extends Controller
             'name'=>'required',
             'pass'=>'required|unique:users,pass',
         ]);
+        
         $name=$request->input('name');
         $pass=$request->input('pass');
         //if ($p != "") {$pass = (int)$p;}
         //$isFlag=0;
 
-        $user = new User();
+        $user=new User();
         $user->name=$name;
         $user->pass=$pass;
         $user->save();
@@ -34,7 +35,7 @@ class EntryController extends Controller
             
         //$flag=new Flag($isFlag);
         $request->session('user', $user);
-        return view('tourokuResult', compact('user'));
+        return view('signUpResult', compact('user'));
         
         // $isFlag=1;
         // $flag=new Flag($isFlag);

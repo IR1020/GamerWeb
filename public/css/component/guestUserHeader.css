@@ -16,14 +16,14 @@ img.SiteName{
     margin-left: 20px;
 }
 
-ul.EntryElement{
+ul.SignUpElement{
     display: flex;
     list-style:none;
     top:0px;
     right:2%;
 }
 
-li.EntryItem{
+li.Item{
     white-space: nowrap;
     margin-left: 25px;
 }

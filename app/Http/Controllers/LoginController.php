@@ -15,14 +15,15 @@ class LoginController extends Controller
 
     public function post(Request $request)
     {
-        $pass=0;
-        $name = $request->input('name');
-        $p = $request->input('pass');
-        if ($p != "") {
-            $pass=(int)$p;
-        }
+        $this->validate($request,[
+            'name'=>'required',
+            'pass'=>'required|unique:users,pass',
+        ]);
+        
+        $name=$request->input('name');
+        $pass=$request->input('pass');
 
-        $user = new User();
+        $user=new User();
 
         if ($user->userCheck($name, $pass) == true) {
             $id = $user->generateId();
