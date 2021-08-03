@@ -20,7 +20,7 @@
         ようこそ　{{$user->getName()}}さん
     </p>
 
-    <a href="{{ url('/my-page') }}">
+    <a href="{{url('/my-page/'.$user->getId())}}">
         マイページへ
     </a>
 
@@ -38,4 +38,5 @@
     </a>
     @endif
 </body>
+
 </html>
