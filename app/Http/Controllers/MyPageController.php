@@ -12,8 +12,7 @@ class MyPageController extends Controller
         $id = $request->session()->get('id');
         
         $name = User::where('id', $id)->value('name');
-        print($name);
-        $request->session()->put('name',$name);
+        
         return view('myPage', compact('id', 'name'));
     }
 }

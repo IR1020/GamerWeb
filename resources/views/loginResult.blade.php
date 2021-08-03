@@ -17,13 +17,13 @@
 
     <p>
         ログインが完了しました。<br>
-        ようこそ　{{$user->getName()}}さん
+        ようこそ　{{$name}}さん
     </p>
 
     <a href="{{url('/my-page')}}">
         マイページへ
     </a>
-    <!-- <a href="{{url('/my-page/'.$user->getId())}}">
+    <!-- <a href="{{url('/my-page/'.$name)}}">
         マイページへ
     </a> -->
 
