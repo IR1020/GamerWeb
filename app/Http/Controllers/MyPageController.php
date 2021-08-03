@@ -7,9 +7,13 @@ use App\Models\User;
 
 class MyPageController extends Controller
 {
-    public function get(int $id)
+    public function get(Request $request)
     {
-        print($id);
-        return view('myPage');
+        $id = $request->session()->get('id');
+        
+        $name = User::where('id', $id)->value('name');
+        print($name);
+        $request->session()->put('name',$name);
+        return view('myPage', compact('id', 'name'));
     }
 }

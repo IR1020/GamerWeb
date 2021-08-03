@@ -10,7 +10,8 @@ Route::post('/sign-up', 'App\Http\Controllers\SignUpController@post');
 Route::get('/login', 'App\Http\Controllers\LoginController@get');
 Route::post('/login', 'App\Http\Controllers\LoginController@post');
 
-Route::get('/my-page/{id}', 'App\Http\Controllers\MyPageController@get');
+Route::get('/my-page', 'App\Http\Controllers\MyPageController@get');
+// Route::get('/my-page/{id}', 'App\Http\Controllers\MyPageController@get');
 
 Route::get('/chat', 'App\Http\Controllers\ChatController@get');
 

@@ -23,20 +23,21 @@ class LoginController extends Controller
         $name = $request->input('name');
         $pass = $request->input('pass');
 
-        $user = new User();
         $id = User::where('name', $name)->where('pass', $pass)->value('id');
         // print "$id";
         if ($id != null) {
+            $request->session()->put('id', $id);
             $isFlag = true;
         } else {
             $isFlag = false;
         }
 
         $flag = new Flag($isFlag);
-        $request->session('flag', $flag);
+        $request->session()->put('flag', $flag);
 
+        $user = new User();
         $user->User($id, $name, $pass);
-        $request->session('user', $user);
+        $request->session()->put('user', $user);
         // print($user->getId());
 
         return view('loginResult', compact('user', 'flag'));

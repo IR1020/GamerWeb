@@ -20,9 +20,12 @@
         ようこそ　{{$user->getName()}}さん
     </p>
 
-    <a href="{{url('/my-page/'.$user->getId())}}">
+    <a href="{{url('/my-page')}}">
         マイページへ
     </a>
+    <!-- <a href="{{url('/my-page/'.$user->getId())}}">
+        マイページへ
+    </a> -->
 
     @else
     <h1>
