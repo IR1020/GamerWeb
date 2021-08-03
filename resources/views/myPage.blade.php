@@ -10,11 +10,11 @@
 
 <body>
     <h1>
-        {{$name}}
+        {{$user_name}}
     </h1>
 
     <h2>
-        ID:{{$id}}
+        ID:{{$user_id}}
     </h2>
 
     <a>

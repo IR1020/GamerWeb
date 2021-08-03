@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use phpDocumentor\Reflection\Types\Boolean;
-
 class Flag
 {
     private $flag;

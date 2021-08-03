@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-//use App\Models\Flag;
+use App\Models\Flag;
 
 class SignUpController extends Controller
 {
@@ -16,26 +16,33 @@ class SignUpController extends Controller
     public function post(Request $request)
     {
         $this->validate($request,[
-            'name'=>'required',
-            'pass'=>'required|unique:users,pass',
+            'user_name'=>'required',
+            'user_pass'=>'required|unique:users,user_pass',
         ]);
         
-        $name=$request->input('name');
-        $pass=$request->input('pass');
+        $user_name=$request->input('user_name');
+        $user_pass=$request->input('user_pass');
         //if ($p != "") {$pass = (int)$p;}
         //$isFlag=0;
 
         $user=new User();
-        $user->name=$name;
-        $user->pass=$pass;
+        $user->user_name=$user_name;
+        $user->user_pass=$user_pass;
         $user->save();
             
-        $id=User::where('name',$name)->where('pass',$pass)->value('id');
-        $user->User($id,$name,$pass);
-            
-        //$flag=new Flag($isFlag);
-        $request->session('user', $user);
-        return view('signUpResult', compact('user'));
+        $user_id=User::where('user_name',$user_name)->where('user_pass',$user_pass)->value('user_id');
+        
+        if ($user_id != null) {
+            $isFlag = true;
+        } else {
+            $isFlag = false;
+        }
+
+        $flag = new Flag($isFlag);
+        $request->session()->put('flag', $flag);
+        $request->session()->put('user_id', $user_id);
+            $request->session()->put('user_name', $user_name);
+        return view('signUpResult', compact('user_name', 'flag'));
         
         // $isFlag=1;
         // $flag=new Flag($isFlag);

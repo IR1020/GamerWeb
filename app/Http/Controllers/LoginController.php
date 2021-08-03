@@ -16,16 +16,16 @@ class LoginController extends Controller
     public function post(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required',
-            'pass' => 'required',
+            'user_name' => 'required',
+            'user_pass' => 'required',
         ]);
 
-        $name = $request->input('name');
-        $pass = $request->input('pass');
+        $user_name = $request->input('user_name');
+        $user_pass = $request->input('user_pass');
 
-        $id = User::where('name', $name)->where('pass', $pass)->value('id');
-        // print "$id";
-        if ($id != null) {
+        $user_id = User::where('user_name', $user_name)->where('user_pass', $user_pass)->value('user_id');
+        
+        if ($user_id != null) {
             $isFlag = true;
         } else {
             $isFlag = false;
@@ -33,9 +33,9 @@ class LoginController extends Controller
 
         $flag = new Flag($isFlag);
         $request->session()->put('flag', $flag);
-        $request->session()->put('id', $id);
-            $request->session()->put('name', $name);
+        $request->session()->put('user_id', $user_id);
+            $request->session()->put('user_name', $user_name);
 
-        return view('loginResult', compact('name', 'flag'));
+        return view('loginResult', compact('user_name', 'flag'));
     }
 }

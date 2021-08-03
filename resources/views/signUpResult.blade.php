@@ -16,10 +16,10 @@
 
     <p>
         ユーザー登録が完了しました。<br>
-        ようこそ　{{$user->getName()}}さん
+        ようこそ　{{$user_name}}さん
     </p>
 
-    <a href="{{ url('/my-page') }}">
+    <a href="{{ url('/my_page') }}">
         マイページへ
     </a>   
 </body>

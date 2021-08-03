@@ -30,13 +30,13 @@
             ユーザー名:
         </p>
 
-        <input type="text" name="name">
+        <input type="text" name="user_name">
 
         <p>
             パスワード:
         </p>
 
-        <input type="password" name="pass">
+        <input type="password" name="user_pass">
 
         <input type="submit" value="ログイン">
     </form>

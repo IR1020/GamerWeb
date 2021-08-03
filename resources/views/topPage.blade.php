@@ -22,7 +22,7 @@
                 <br>
                 ユーザー登録を行い、記事を投稿してみましょう！
             </p>
-            <a href="{{url('/sign-up')}}" class="btn">今すぐユーザー登録を行う</a>
+            <a href="{{url('/sign_up')}}" class="btn">今すぐユーザー登録を行う</a>
         </div>
 
         <img id="setsumei" src="../public/img/sns05.png" width="200" height="200" alt="sns01">

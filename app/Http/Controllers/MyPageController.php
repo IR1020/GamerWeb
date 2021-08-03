@@ -9,10 +9,10 @@ class MyPageController extends Controller
 {
     public function get(Request $request)
     {
-        $id = $request->session()->get('id');
+        $user_id = $request->session()->get('user_id');
         
-        $name = User::where('id', $id)->value('name');
+        $user_name = User::where('user_id', $user_id)->value('user_name');
         
-        return view('myPage', compact('id', 'name'));
+        return view('myPage', compact('user_id', 'user_name'));
     }
 }

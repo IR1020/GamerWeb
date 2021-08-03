@@ -13,7 +13,7 @@
 
         <ul class="SignUpElement">
             <li class="Item">
-                <a class="Url" href="{{ url('/sign-up') }}">新規登録</a>
+                <a class="Url" href="{{ url('/sign_up') }}">新規登録</a>
             </li>
 
             <li class="Item">

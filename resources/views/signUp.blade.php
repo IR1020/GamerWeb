@@ -24,18 +24,18 @@
         ご希望のユーザー名とパスワードを入力してください。
     </p>
     
-    <form action="sign-up" method="post">
+    <form action="sign_up" method="post">
         @csrf
             <p class="ItemName">
                 ユーザー名:
             </p>
-            <input type="text" name="name">
+            <input type="text" name="user_name">
 
             <p class="ItemName">
                 パスワード:
             </p>
             
-            <input type="password" name="pass">
+            <input type="password" name="user_pass">
             
             <input type="submit" value="登録"><br>
     </form>

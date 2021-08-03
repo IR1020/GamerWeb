@@ -7,31 +7,31 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
-    protected $casts=['id'=>'int'];
-    private $id;
-    private $name;
-    private $pass;
+    protected $casts=['user_id'=>'int'];
+    private $user_id;
+    private $user_name;
+    private $user_pass;
     
-    public function User($id,$name,$pass)
+    public function User($user_id,$user_name,$user_pass)
     {
-        $this->id=$id;
-        $this->name=$name;
-        $this->pass=$pass;
+        $this->user_id=$user_id;
+        $this->name=$user_name;
+        $this->pass=$user_pass;
     }
     
-    public function getId()
+    public function getUserId()
     {
-        return $this->id;
+        return $this->user_id;
     }
     
-    public function getName()
+    public function getUserName()
     {
-        return $this->name;
+        return $this->user_name;
     }
     
-    public function getPass()
+    public function getUserPass()
     {
-        return $this->pass;
+        return $this->user_pass;
     }
     
     // public function userCheck($name,$pass){
