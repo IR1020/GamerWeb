@@ -15,8 +15,8 @@ class User extends Model
     public function User($user_id,$user_name,$user_pass)
     {
         $this->user_id=$user_id;
-        $this->name=$user_name;
-        $this->pass=$user_pass;
+        $this->user_name=$user_name;
+        $this->user_pass=$user_pass;
     }
     
     public function getUserId()

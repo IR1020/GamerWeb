@@ -17,11 +17,11 @@
         ID:{{$user_id}}
     </h2>
 
-    <a>
+    <a href="{{url('/write_report')}}">
         記事を投稿する
     </a>
     
-    <a>
+    <a href="{{url('/edit_report')}}">
         記事を編集する
     </a>
     

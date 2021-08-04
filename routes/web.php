@@ -13,6 +13,12 @@ Route::post('/login', 'App\Http\Controllers\LoginController@post');
 Route::get('/my_page', 'App\Http\Controllers\MyPageController@get');
 // Route::get('/my_page/{user_id}', 'App\Http\Controllers\MyPageController@get');
 
+Route::get('/write_report', 'App\Http\Controllers\WriteReportController@get');
+Route::post('/write_report', 'App\Http\Controllers\WriteReportController@post');
+
+Route::get('/view_report/{report_id}', 'App\Http\Controllers\ViewReportController@get');
+
+
 Route::get('/chat', 'App\Http\Controllers\ChatController@get');
 
 Route::get('/chat_room', 'App\Http\Controllers\ChatRoomController@get');
