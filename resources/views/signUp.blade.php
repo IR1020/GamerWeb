@@ -39,5 +39,8 @@
             
             <input type="submit" value="登録"><br>
     </form>
+    
+    @component('component.footer')
+    @endcomponent
 </body>
 </html>

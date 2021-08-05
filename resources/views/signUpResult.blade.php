@@ -21,6 +21,9 @@
 
     <a href="{{ url('/my_page') }}">
         マイページへ
-    </a>   
+    </a>
+    
+    @component('component.footer')
+    @endcomponent
 </body>
 </html>

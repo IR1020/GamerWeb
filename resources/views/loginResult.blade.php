@@ -40,6 +40,9 @@
         再度ログイン認証を行う
     </a>
     @endif
+    
+    @component('component.footer')
+    @endcomponent
 </body>
 
 </html>

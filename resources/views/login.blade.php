@@ -40,5 +40,8 @@
 
         <input type="submit" value="ログイン">
     </form>
+    
+    @component('component.footer')
+    @endcomponent
 </body>
 </html>
