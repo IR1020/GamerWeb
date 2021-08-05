@@ -34,8 +34,10 @@ class LoginController extends Controller
         $flag = new Flag($isFlag);
         $request->session()->put('flag', $flag);
         $request->session()->put('user_id', $user_id);
-            $request->session()->put('user_name', $user_name);
+        $request->session()->put('user_name', $user_name);
+            
+        $page_id=$user_id;
 
-        return view('loginResult', compact('user_name', 'flag'));
+        return view('loginResult', compact('user_id','user_name','page_id', 'flag'));
     }
 }

@@ -10,10 +10,6 @@
 </head>
 
 <body>
-    <h1>
-        SNS名(ログイン画面)
-    </h1>
-    
     @foreach ($errors->all() as $error)
     <li>
         {{$error}}

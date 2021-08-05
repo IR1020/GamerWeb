@@ -9,12 +9,20 @@
 </head>
 
 <body>
-    <h1>
-        記事ページ
-    </h1>
+    <p class="user_name">
+        {{$user_name}}
+    </p>
 
-    <p>
-        {{$user_id}}{{$user_name}}{{$report_id}}{{$report_title}}{{$report_text}}
+    <p class="user_id">
+        {{$user_id}}
+    </p>
+
+    <p class="report_title">
+        {{$report_title}}
+    </p>
+
+    <p class="report_text">
+        {{$report_text}}
     </p>
 
     @component('component.footer')

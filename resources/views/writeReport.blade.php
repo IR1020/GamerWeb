@@ -9,10 +9,6 @@
 </head>
 
 <body>
-    <h1>
-        記事の投稿
-    </h1>
-
     @foreach ($errors->all() as $error)
     <li>
         {{$error}}

@@ -45,7 +45,10 @@ class SignUpController extends Controller
         $request->session()->put('flag', $flag);
         $request->session()->put('user_id', $user_id);
         $request->session()->put('user_name', $user_name);
-        return view('signUpResult', compact('user_name', 'flag'));
+        
+        $page_id=$user_id;
+        
+        return view('signUpResult', compact('user_id','user_name','page_id', 'flag'));
 
         // $isFlag=1;
         // $flag=new Flag($isFlag);

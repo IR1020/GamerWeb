@@ -11,27 +11,16 @@
 
 <body>
     @if($flag->getFlag()==true)
-    <h1>
-        ログイン完了
-    </h1>
-
     <p>
         ログインが完了しました。<br>
         ようこそ　{{$user_name}}さん
     </p>
 
-    <a href="{{url('/my_page')}}">
+    <a href="{{url('/user_page/'.$page_id)}}">
         マイページへ
     </a>
-    <!-- <a href="{{url('/my_page/'.$user_name)}}">
-        マイページへ
-    </a> -->
 
     @else
-    <h1>
-        ログイン失敗
-    </h1>
-
     <p>
         ログインできませんでした。
     </p>

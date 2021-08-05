@@ -10,10 +10,6 @@
 </head>
 
 <body>
-    <h1>
-        ユーザー登録
-    </h1>
-    
     @foreach ($errors->all() as $error)
     <li>
         {{$error}}

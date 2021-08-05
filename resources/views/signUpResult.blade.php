@@ -10,16 +10,12 @@
 </head>
 
 <body>
-    <h1>
-        ユーザー登録完了
-    </h1>
-
     <p>
         ユーザー登録が完了しました。<br>
         ようこそ　{{$user_name}}さん
     </p>
 
-    <a href="{{ url('/my_page') }}">
+    <a href="{{ url('/user_page/'.$page_id) }}">
         マイページへ
     </a>
     

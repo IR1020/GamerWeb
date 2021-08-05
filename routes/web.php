@@ -10,8 +10,7 @@ Route::post('/sign_up', 'App\Http\Controllers\SignUpController@post');
 Route::get('/login', 'App\Http\Controllers\LoginController@get');
 Route::post('/login', 'App\Http\Controllers\LoginController@post');
 
-Route::get('/my_page', 'App\Http\Controllers\MyPageController@get');
-// Route::get('/my_page/{user_id}', 'App\Http\Controllers\MyPageController@get');
+Route::get('/user_page/{page_id}', 'App\Http\Controllers\UserPageController@get');
 
 Route::get('/write_report', 'App\Http\Controllers\WriteReportController@get');
 Route::post('/write_report', 'App\Http\Controllers\WriteReportController@post');
