@@ -1,6 +1,6 @@
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../public/css/component/guestUserHeader.css">
+    <link rel="stylesheet" href="{{asset('../public/css/component/guestUserHeader.css')}}">
 </head>
 
 <header>

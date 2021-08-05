@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class ViewReportController extends Controller
 {
-    public function get($report_id)
+    public function get(Request $request,$report_id)
     {   
         $user_id = Report::where('report_id', $report_id)->value('user_id');
         $report_title = Report::where('report_id', $report_id)->value('report_title');

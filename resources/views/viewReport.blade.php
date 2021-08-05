@@ -14,7 +14,7 @@
     </h1>
 
     <p>
-        a
+        {{$user_id}}{{$user_name}}{{$report_id}}{{$report_title}}{{$report_text}}
     </p>
 
     @component('component.footer')
