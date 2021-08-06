@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    @if($flag->getFlag()==true)
+    @if($flag==true)
     <p>
         ログインが完了しました。<br>
         ようこそ　{{$user_name}}さん

@@ -26,13 +26,11 @@ class LoginController extends Controller
         $user_id = User::where('user_name', $user_name)->where('user_pass', $user_pass)->value('user_id');
         
         if ($user_id != null) {
-            $isFlag = true;
+            $flag = true;
         } else {
-            $isFlag = false;
+            $flag = false;
         }
 
-        $flag = new Flag($isFlag);
-        $request->session()->put('flag', $flag);
         $request->session()->put('user_id', $user_id);
         $request->session()->put('user_name', $user_name);
             

@@ -17,6 +17,8 @@ Route::post('/write_report', 'App\Http\Controllers\WriteReportController@post');
 
 Route::get('/view_report/{report_id}', 'App\Http\Controllers\ViewReportController@get');
 
+Route::get('/edit_report/{report_id}', 'App\Http\Controllers\EditReportController@get');
+Route::post('/edit_report/{report_id}', 'App\Http\Controllers\EditReportController@post');
 
 Route::get('/chat', 'App\Http\Controllers\ChatController@get');
 

@@ -20,7 +20,7 @@
         ユーザー名とパスワードを入力してください。
     </p>
 
-    <form action="login" method="post">
+    <form action="{{url('/login')}}" method="post">
         @csrf
         <p>
             ユーザー名:

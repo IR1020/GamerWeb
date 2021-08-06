@@ -9,6 +9,10 @@
 </head>
 
 <body>
+<a href="{{url('/edit_report/'.$report_id)}}">
+        編集ページへ
+    </a>
+
     <p class="user_name">
         {{$user_name}}
     </p>
