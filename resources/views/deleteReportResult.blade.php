@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 
     <title>
-        ログイン結果画面
+        記事削除結果画面
     </title>
     
     <link rel="stylesheet" href="{{asset('../public/css/body.css')}}">
@@ -15,23 +15,18 @@
     <main>
     @if($flag==true)
     <p>
-        ログインが完了しました。<br>
-        ようこそ　{{$user_name}}さん
+        記事の削除が完了しました。
     </p>
-
+    @else
+    <p>
+        記事の削除をキャンセルしました。
+    </p>
+    @endif
+    
     <a href="{{url('/user_page/'.$page_id)}}">
         マイページへ
     </a>
-
-    @else
-    <p>
-        ログインできませんでした。
-    </p>
-
-    <a class="Url" href="{{ url('/login') }}">
-        再度ログイン認証を行う
-    </a>
-    @endif
+    
     </main>
     
     @component('component.footer')

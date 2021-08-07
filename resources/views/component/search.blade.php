@@ -2,6 +2,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{asset('../public/css/component/search.css')}}">
 </head>
+
 <div class="SearchElement">
     <p class="SearchElementMessage">
         ▼登録せずにサービスを利用

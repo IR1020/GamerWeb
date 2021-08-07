@@ -7,10 +7,11 @@
         記事ページ
     </title>
     
-    <link rel="stylesheet" href="../public/css/body.css">
+    <link rel="stylesheet" href="{{asset('../public/css/body.css')}}">
 </head>
 
 <body>
+    <main>
     @foreach($search_results as $search_result)
     <a href="{{ url('/view_report/'.$search_result->report_id) }}">
     {{$search_result->report_title}}</a><br>
@@ -18,6 +19,8 @@
     @endforeach
     
     {{$search_results->links()}}
+    
+    </main>
     
     @component('component.footer')
     @endcomponent

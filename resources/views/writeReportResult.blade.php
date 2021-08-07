@@ -7,10 +7,11 @@
         投稿完了
     </title>
     
-    <link rel="stylesheet" href="../public/css/body.css">
+    <link rel="stylesheet" href="{{asset('../public/css/body.css')}}">
 </head>
 
 <body>
+    <main>
     <p>
         投稿が完了しました。
     </p>
@@ -18,6 +19,7 @@
     <a href="{{url('/view_report/'.$report_id)}}">
         記事ページへ
     </a>
+    </main>
 
     @component('component.footer')
     @endcomponent

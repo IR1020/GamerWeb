@@ -7,8 +7,8 @@
         トップページ
     </title>
     
-    <link rel="stylesheet" href="../public/css/body.css">
-    <link rel="stylesheet" href="../public/css/topPage.css">
+    <link rel="stylesheet" href="{{asset('../public/css/body.css')}}">
+    <link rel="stylesheet" href="{{asset('../public/css/topPage.css')}}">
 </head>
 
 <body>

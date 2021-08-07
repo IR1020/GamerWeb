@@ -7,10 +7,11 @@
         記事投稿画面
     </title>
     
-    <link rel="stylesheet" href="../public/css/body.css">
+    <link rel="stylesheet" href="{{asset('../public/css/body.css')}}">
 </head>
 
 <body>
+    <main>
     @foreach ($errors->all() as $error)
     <li>
         {{$error}}
@@ -25,6 +26,7 @@
 
         <input type="submit" value="投稿"><br>
     </form>
+    </main>
 
     @component('component.footer')
     @endcomponent

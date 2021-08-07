@@ -8,10 +8,11 @@
         ユーザー登録完了画面
     </title>
     
-    <link rel="stylesheet" href="../public/css/body.css">
+    <link rel="stylesheet" href="{{asset('../public/css/body.css')}}">
 </head>
 
 <body>
+    <main>
     <p>
         ユーザー登録が完了しました。<br>
         ようこそ　{{$user_name}}さん
@@ -20,6 +21,7 @@
     <a href="{{ url('/user_page/'.$page_id) }}">
         マイページへ
     </a>
+    </main>
     
     @component('component.footer')
     @endcomponent
