@@ -6,9 +6,9 @@
     <p class="SearchElementMessage">
         ▼登録せずにサービスを利用
     </P>
-    <form action="search" method="post">
+    <form action="{{url('/search_report')}}" method="post">
         @csrf
-        <input type="search" placeholder="記事を検索">
+        <input type="search" name="search_word" placeholder="記事を検索">
         <input type="submit" value="検索">
     </form>
 </div>

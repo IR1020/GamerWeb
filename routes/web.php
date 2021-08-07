@@ -12,6 +12,8 @@ Route::post('/login', 'App\Http\Controllers\LoginController@post');
 
 Route::get('/user_page/{page_id}', 'App\Http\Controllers\UserPageController@get');
 
+Route::post('/search_report', 'App\Http\Controllers\SearchReportController@post');
+
 Route::get('/write_report', 'App\Http\Controllers\WriteReportController@get');
 Route::post('/write_report', 'App\Http\Controllers\WriteReportController@post');
 

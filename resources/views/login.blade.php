@@ -7,9 +7,12 @@
     <title>
         ログイン画面
     </title>
+    
+    <link rel="stylesheet" href="../public/css/body.css">
 </head>
 
 <body>
+    <main>
     @foreach ($errors->all() as $error)
     <li>
         {{$error}}
@@ -36,6 +39,7 @@
 
         <input type="submit" value="ログイン">
     </form>
+    </main>
     
     @component('component.footer')
     @endcomponent

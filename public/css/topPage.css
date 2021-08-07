@@ -1,11 +1,5 @@
 @charset "utf-8";
 
-body {
-    /* background-color:white; */
-    /* background-image: url(../img/haikei07.png); */
-    background-size: cover;
-}
-
 .TopDescription{
     padding-top:130px;
     color: #007bff;

@@ -7,6 +7,8 @@
     <title>
         ユーザー登録完了画面
     </title>
+    
+    <link rel="stylesheet" href="../public/css/body.css">
 </head>
 
 <body>

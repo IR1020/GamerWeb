@@ -7,6 +7,7 @@
         トップページ
     </title>
     
+    <link rel="stylesheet" href="../public/css/body.css">
     <link rel="stylesheet" href="../public/css/topPage.css">
 </head>
 
@@ -14,6 +15,7 @@
     @component('component.guestUserHeader')
     @endcomponent
 
+    <main>
     <div class="TopDescription">
         <div class="DescriptionName">
             <h1 class="DescriptionName">GamerWebとは？</h1>
@@ -54,7 +56,8 @@
         </div>
     </div>
     <!-- <a href="{{ url('/touroku') }}"><img src="../public/img/wakaba.png" width="100" height="100" alt="初めてご利用の方"></a><br><br> -->
-
+    </main>
+    
     @component('component.footer')
     @endcomponent
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>

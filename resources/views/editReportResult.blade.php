@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>
-        投稿完了
+        編集完了
     </title>
     
     <link rel="stylesheet" href="../public/css/body.css">
@@ -12,7 +12,7 @@
 
 <body>
     <p>
-        投稿が完了しました。
+        編集が完了しました。
     </p>
     
     <a href="{{url('/view_report/'.$report_id)}}">

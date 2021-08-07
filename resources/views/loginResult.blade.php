@@ -7,6 +7,8 @@
     <title>
         ログイン結果画面
     </title>
+    
+    <link rel="stylesheet" href="../public/css/body.css">
 </head>
 
 <body>

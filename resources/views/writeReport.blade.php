@@ -6,6 +6,8 @@
     <title>
         記事投稿画面
     </title>
+    
+    <link rel="stylesheet" href="../public/css/body.css">
 </head>
 
 <body>

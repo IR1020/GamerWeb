@@ -6,6 +6,8 @@
     <title>
         トップページ
     </title>
+    
+    <link rel="stylesheet" href="../public/css/body.css">
 </head>
 
 <body>

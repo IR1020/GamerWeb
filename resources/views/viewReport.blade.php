@@ -6,6 +6,8 @@
     <title>
         記事ページ
     </title>
+    
+    <link rel="stylesheet" href="../public/css/body.css">
 </head>
 
 <body>

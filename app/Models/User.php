@@ -34,6 +34,11 @@ class User extends Model
         return $this->user_pass;
     }
     
+    public function reports()
+    {
+        return $this->hasMany('App\Report');
+    }
+    
     // public function userCheck($name,$pass){
     //     if($name!="" && $pass!=""){return true;}
     //     else return false;
@@ -42,13 +47,5 @@ class User extends Model
     // public function generateId(){
     //     $id = mt_rand(10000000,99999999);
     //     return $id;
-    // }
-    
-    // public function tableInsert($id,$name,$pass){
-    //     DB::table('users')->insert([
-    //         'id'=>$id,
-    //         'name'=>$name,
-    //         'pass'=>$pass
-    //     ]);
     // }
 }
