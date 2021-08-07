@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>
-        記事ページ
+        記事検索結果ページ
     </title>
     
     <link rel="stylesheet" href="{{asset('../public/css/body.css')}}">
+    <link rel="stylesheet" href="{{asset('../public/css/searchReportResult.css')}}">
 </head>
 
 <body>
@@ -18,8 +19,7 @@
     {{$search_result->report_text}}<br><br>
     @endforeach
     
-    {{$search_results->links()}}
-    
+    <div class="page_number">{{$search_results->links()}}</div>
     </main>
     
     @component('component.footer')

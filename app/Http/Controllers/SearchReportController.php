@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class SearchReportController extends Controller
 {
-    public function post(Request $request)
+    public function get(Request $request)
     {   
         $search_word = $request->input('search_word');
         

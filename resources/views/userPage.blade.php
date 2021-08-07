@@ -11,6 +11,8 @@
 </head>
 
 <body>
+@component('component.guestUserHeader')
+    @endcomponent
     <main>
     <h1>
         {{$user_name}}
@@ -19,6 +21,8 @@
     <h2>
         ID:{{$user_id}}
     </h2>
+    
+    @if($flag==true)
     
     <a href="{{url('/logout')}}">
         ログアウト
@@ -39,6 +43,8 @@
     <a href="{{url('/delete_user/'.$user_id)}}">
         退会する
     </a>
+    
+    @endif
     
     </main>
     
