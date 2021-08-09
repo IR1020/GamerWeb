@@ -22,7 +22,7 @@
         @csrf
         <input type="text" name="report_title" placeholder="記事タイトル"><br><br>
 
-        <textarea name="report_text" rows="10" cols="70" placeholder="記事本文"></textarea><br>
+        <textarea name="report_content" rows="10" cols="70" placeholder="記事本文"></textarea><br>
 
         <input type="submit" value="投稿"><br>
     </form>

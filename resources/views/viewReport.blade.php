@@ -32,8 +32,8 @@
             {{$report_title}}
         </p>
 
-        <p class="report_text">
-            {{$report_text}}
+        <p class="report_content">
+            {{$report_content}}
         </p>
     </main>
 

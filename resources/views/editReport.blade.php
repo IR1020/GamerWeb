@@ -22,7 +22,7 @@
         @csrf
         <input type="text" name="report_title" value={{$report_title}}><br><br>
 
-        <textarea name="report_text" rows="10" cols="70">{{$report_text}}</textarea><br>
+        <textarea name="report_content" rows="10" cols="70">{{$report_content}}</textarea><br>
 
         <input type="submit" value="編集"><br>
     </form>

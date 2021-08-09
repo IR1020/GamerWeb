@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Report extends Model
 {
-    protected $report_id;
-    protected $report_title;
-    protected $report_text;
+    protected $id;
+    protected $title;
+    protected $text;
 
     public function user()
     {

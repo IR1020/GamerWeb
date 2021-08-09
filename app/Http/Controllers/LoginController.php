@@ -17,14 +17,14 @@ class LoginController extends Controller
     {
         $this->validate($request, [
             'user_name' => 'required',
-            'user_pass' => 'required',
+            'user_password' => 'required',
         ]);
 
         $user_name = $request->input('user_name');
-        $user_pass = $request->input('user_pass');
+        $user_password = $request->input('user_password');
 
-        $user_id = User::where('user_name', $user_name)->where('user_pass', $user_pass)->value('user_id');
-        
+        $user_id = User::where('name', $user_name)->where('password', $user_password)->value('id');
+
         if ($user_id != null) {
             $flag = true;
         } else {
@@ -33,9 +33,9 @@ class LoginController extends Controller
 
         $request->session()->put('user_id', $user_id);
         $request->session()->put('user_name', $user_name);
-            
-        $page_id=$user_id;
 
-        return view('loginResult', compact('user_id','user_name','page_id', 'flag'));
+        $page_id = $user_id;
+
+        return view('loginResult', compact('user_id', 'user_name', 'page_id', 'flag'));
     }
 }

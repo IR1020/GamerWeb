@@ -35,7 +35,7 @@
             パスワード:
         </p>
 
-        <input type="password" name="user_pass">
+        <input type="password" name="user_password">
 
         <input type="submit" value="ログイン">
     </form>

@@ -10,26 +10,26 @@ class EditReportController extends Controller
 {
     public function get(Request $request,$report_id)
     {   
-        $report_title = Report::where('report_id', $report_id)->value('report_title');
-        $report_text = Report::where('report_id', $report_id)->value('report_text');
+        $report_title = Report::where('id', $report_id)->value('title');
+        $report_content = Report::where('id', $report_id)->value('content');
         
-        return view('editReport', compact("report_id","report_title", "report_text"));
+        return view('editReport', compact("report_id","report_title", "report_content"));
     }
     
     public function post(Request $request,$report_id)
     {
         $this->validate($request, [
             'report_title' => 'required',
-            'report_text' => 'required',
+            'report_content' => 'required',
         ]);
         
         $report_title = $request->input('report_title');
-        $report_text = $request->input('report_text');
+        $report_content = $request->input('report_content');
 
-        DB::transaction(function () use($report_id,$report_title,$report_text) {
-            Report::where('report_id',$report_id)->update([
-                'report_title'=>$report_title,
-                'report_text'=>$report_text]);
+        DB::transaction(function () use($report_id,$report_title,$report_content) {
+            Report::where('id',$report_id)->update([
+                'title'=>$report_title,
+                'content'=>$report_content]);
         });
         
         return view('editReportResult', compact('report_id'));
