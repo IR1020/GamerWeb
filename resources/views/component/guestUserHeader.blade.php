@@ -5,7 +5,7 @@
 
 <header>
     <div class="HeaderElement">
-        <img class="SiteName" src="../public/img/logo01.png" width="200" height="50" alt="logo01">
+        <img class="SiteName" src="{{asset('../public/img/logo01.png')}}" width="200" height="50" alt="logo01">
 
         <!-- 検索バー -->
         @component('component.search')

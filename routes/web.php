@@ -29,7 +29,3 @@ Route::post('/edit_report/{report_id}', 'App\Http\Controllers\EditReportControll
 
 Route::get('/delete_report/{report_id}', 'App\Http\Controllers\DeleteReportController@get');
 Route::post('/delete_report/{report_id}', 'App\Http\Controllers\DeleteReportController@post');
-
-Route::get('/chat', 'App\Http\Controllers\ChatController@get');
-
-Route::get('/chat_room', 'App\Http\Controllers\ChatRoomController@get');

@@ -14,6 +14,8 @@
 <body>
     <main>
     @foreach($search_results as $search_result)
+    {{$search_result->user_id}}
+    {{$search_result->user_name}}
     <a href="{{ url('/view_report/'.$search_result->report_id) }}">
     {{$search_result->report_title}}</a><br>
     {{$search_result->report_text}}<br><br>
