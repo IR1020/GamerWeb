@@ -10,10 +10,9 @@ class EditReportController extends Controller
 {
     public function get(Request $request,$report_id)
     {   
-        $report_title = Report::where('id', $report_id)->value('title');
-        $report_content = Report::where('id', $report_id)->value('content');
+        $datas = Report::where('id', $report_id)->get();
         
-        return view('editReport', compact("report_id","report_title", "report_content"));
+        return view('editReport', compact("datas"));
     }
     
     public function post(Request $request,$report_id)

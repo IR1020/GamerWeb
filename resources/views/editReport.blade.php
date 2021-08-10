@@ -18,14 +18,16 @@
     </li>
     @endforeach
 
-    <form action="{{url('/edit_report/'.$report_id)}}" method="post">
+    @foreach($datas as $report)
+    <form action="{{url('/edit_report/'.$report->id)}}" method="post">
         @csrf
-        <input type="text" name="report_title" value={{$report_title}}><br><br>
+        <input type="text" name="report_title" value="{{$report->title}}"><br><br>
 
-        <textarea name="report_content" rows="10" cols="70">{{$report_content}}</textarea><br>
+        <textarea name="report_content" rows="10" cols="70">{{$report->content}}</textarea><br>
 
         <input type="submit" value="編集"><br>
     </form>
+    @endforeach
     </main>
 
     @component('component.footer')

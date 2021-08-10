@@ -12,29 +12,20 @@
 
 <body>
     <main>
-        <a href="{{url('/edit_report/'.$report_id)}}">
+        @foreach($datas as $report)
+        <a href="{{url('/edit_report/'.$report->id)}}">
             記事を編集する
         </a>
-        
-        <a href="{{url('/delete_report/'.$report_id)}}">
+
+        <a href="{{url('/delete_report/'.$report->id)}}">
             記事を削除する
         </a>
 
-        <p class="user_name">
-            {{$user_name}}
-        </p>
-
-        <p class="user_id">
-            {{$user_id}}
-        </p>
-
-        <p class="report_title">
-            {{$report_title}}
-        </p>
-
-        <p class="report_content">
-            {{$report_content}}
-        </p>
+        {{$report->user->name}}
+        {{$report->user->id}}
+        {{$report->title}}
+        {{$report->content}}
+        @endforeach
     </main>
 
     @component('component.footer')

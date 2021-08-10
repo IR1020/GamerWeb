@@ -10,10 +10,6 @@ class WriteReportController extends Controller
 {
     public function get()
     {
-        // $datas = Report::with('user')->get();
-        // foreach($datas as $data){
-        //     echo $data->user->name;
-        // }
         return view('writeReport');
     }
     
