@@ -16,7 +16,7 @@ class WriteReportController extends Controller
     public function post(Request $request)
     {
         $this->validate($request, [
-            'report_title' => 'required',
+            'report_title' => 'required|max:100',
             'report_content' => 'required',
         ]);
         
@@ -26,11 +26,11 @@ class WriteReportController extends Controller
         $user_id = $request->session()->get('user_id');
 
         DB::transaction(function () use($user_id,$report_title,$report_content) {
-            $report = new Report();
-            $report->user_id = $user_id;
-            $report->title = $report_title;
-            $report->content = $report_content;
-            $report->save();
+            $report = Report::create([
+                'user_id'=>$user_id,
+                'title'=>$report_title,
+                'content'=>$report_content,
+            ]);
         });
         
         $report_id = Report::latest()->value('id');

@@ -13,6 +13,7 @@
 <body>
     <main>
         @foreach($datas as $report)
+        @if($flag==true)
         <a href="{{url('/edit_report/'.$report->id)}}">
             記事を編集する
         </a>
@@ -20,7 +21,8 @@
         <a href="{{url('/delete_report/'.$report->id)}}">
             記事を削除する
         </a>
-
+        @endif
+        
         {{$report->user->name}}
         {{$report->user->id}}
         {{$report->title}}

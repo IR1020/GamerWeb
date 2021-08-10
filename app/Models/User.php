@@ -6,9 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
-    protected $id;
-    protected $name;
-    protected $password;
+    protected $guarded = [
+        'id',
+    ];
+    
+    protected $hidden = [
+        'password',
+    ];
     
     public function reports()
     {

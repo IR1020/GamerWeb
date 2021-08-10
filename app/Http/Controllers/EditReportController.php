@@ -18,7 +18,7 @@ class EditReportController extends Controller
     public function post(Request $request,$report_id)
     {
         $this->validate($request, [
-            'report_title' => 'required',
+            'report_title' => 'required|max:100',
             'report_content' => 'required',
         ]);
         
@@ -28,7 +28,8 @@ class EditReportController extends Controller
         DB::transaction(function () use($report_id,$report_title,$report_content) {
             Report::where('id',$report_id)->update([
                 'title'=>$report_title,
-                'content'=>$report_content]);
+                'content'=>$report_content,
+            ]);
         });
         
         return view('editReportResult', compact('report_id'));

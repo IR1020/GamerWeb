@@ -16,18 +16,18 @@ class SignUpController extends Controller
     public function post(Request $request)
     {
         $this->validate($request, [
-            'user_name' => 'required',
-            'user_password' => 'required|unique:users,password',
+            'user_name' => 'required|max:50',
+            'user_password' => 'required|unique:users,password|max:50',
         ]);
 
         $user_name = $request->input('user_name');
         $user_password = $request->input('user_password');
 
         DB::transaction(function () use ($user_name, $user_password) {
-            $user = new User();
-            $user->name = $user_name;
-            $user->password = $user_password;
-            $user->save();
+            $user = User::create([
+                'name'=>$user_name,
+                'password'=>$user_password,
+            ]);
         });
 
         $user_id = User::where('name', $user_name)->where('password', $user_password)->value('id');
