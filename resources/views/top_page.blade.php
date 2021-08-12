@@ -8,11 +8,11 @@
     </title>
     
     <link rel="stylesheet" href="{{asset('../public/css/body.css')}}">
-    <link rel="stylesheet" href="{{asset('../public/css/topPage.css')}}">
+    <link rel="stylesheet" href="{{asset('../public/css/top_page.css')}}">
 </head>
 
 <body>
-    @component('component.guestUserHeader')
+    @component('component.guest_user_header')
     @endcomponent
 
     <main>

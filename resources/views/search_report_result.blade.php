@@ -8,7 +8,7 @@
     </title>
     
     <link rel="stylesheet" href="{{asset('../public/css/body.css')}}">
-    <link rel="stylesheet" href="{{asset('../public/css/searchReportResult.css')}}">
+    <link rel="stylesheet" href="{{asset('../public/css/search.report.result.css')}}">
 </head>
 
 <body>

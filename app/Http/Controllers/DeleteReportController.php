@@ -10,7 +10,7 @@ class DeleteReportController extends Controller
 {
     public function get(Request $request, $report_id)
     {
-        return view('deleteReport', compact("report_id"));
+        return view('delete_report', compact("report_id"));
     }
 
     public function post(Request $request, $report_id)
@@ -33,6 +33,6 @@ class DeleteReportController extends Controller
 
         $page_id = $user_id;
 
-        return view('deleteReportResult', compact('page_id', 'flag'));
+        return view('delete_report_result', compact('page_id', 'flag'));
     }
 }

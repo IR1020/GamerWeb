@@ -23,7 +23,10 @@
         </a>
         @endif
         
-        {{$report->user->name}}
+        <a href="{{url('/user_page/'.$report->user->id)}}">
+            {{$report->user->name}}
+        </a>
+        
         {{$report->user->id}}
         {{$report->title}}
         {{$report->content}}
