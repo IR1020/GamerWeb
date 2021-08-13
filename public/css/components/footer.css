@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-footer{
+div.Footer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,7 @@ footer{
     bottom:0;
 }
 
-.footer{
+p.Footer{
     color: #007bff;
     text-align:center;
 }

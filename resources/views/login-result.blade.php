@@ -19,7 +19,7 @@
         ようこそ　{{$user_name}}さん
     </p>
 
-    <a href="{{url('/user_page/'.$page_id)}}">
+    <a href="{{url('/user-page/'.$page_id)}}">
         マイページへ
     </a>
 
@@ -34,8 +34,7 @@
     @endif
     </main>
     
-    @component('component.footer')
-    @endcomponent
+    <x-footer/>
 </body>
 
 </html>

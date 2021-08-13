@@ -19,7 +19,7 @@
     @endforeach
 
     @foreach($datas as $report)
-    <form action="{{url('/edit_report/'.$report->id)}}" method="post">
+    <form action="{{url('/edit-report/'.$report->id)}}" method="post">
         @csrf
         <input type="text" name="report_title" value="{{$report->title}}"><br><br>
 
@@ -30,8 +30,7 @@
     @endforeach
     </main>
 
-    @component('component.footer')
-    @endcomponent
+    <x-footer/>
 </body>
 
 </html>

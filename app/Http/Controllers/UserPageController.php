@@ -19,6 +19,6 @@ class UserPageController extends Controller
 
         $user_name = User::where('id', $user_id)->value('name');
 
-        return view('user_page', compact('user_id', 'user_name', 'flag'));
+        return view('user-page', compact('user_id', 'user_name', 'flag'));
     }
 }

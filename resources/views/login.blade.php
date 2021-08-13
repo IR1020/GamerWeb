@@ -41,7 +41,6 @@
     </form>
     </main>
     
-    @component('component.footer')
-    @endcomponent
+    <x-footer/>
 </body>
 </html>

@@ -10,6 +10,6 @@ class LogoutController extends Controller
     {
         $request->session()->forget('user_id');
         
-        return view('top_page');
+        return view('top-page');
     }
 }

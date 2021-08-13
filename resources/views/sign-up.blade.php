@@ -23,7 +23,7 @@
         ご希望のユーザー名とパスワードを入力してください。
     </p>
     
-    <form action="{{url('/sign_up')}}" method="post">
+    <form action="{{url('/sign-up')}}" method="post">
         @csrf
             <p class="ItemName">
                 ユーザー名:
@@ -40,7 +40,6 @@
     </form>
     </main>
     
-    @component('component.footer')
-    @endcomponent
+    <x-footer/>
 </body>
 </html>

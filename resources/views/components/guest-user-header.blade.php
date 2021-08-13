@@ -1,6 +1,6 @@
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{asset('../public/css/component/guest_user_header.css')}}">
+    <link rel="stylesheet" href="{{asset('../public/css/components/guest-user-header.css')}}">
 </head>
 
 <header>
@@ -8,12 +8,11 @@
         <img class="SiteName" src="{{asset('../public/img/logo01.png')}}" width="200" height="50" alt="logo01">
 
         <!-- 検索バー -->
-        @component('component.search')
-        @endcomponent
+        <x-search/>
 
         <ul class="SignUpElement">
             <li class="Item">
-                <a class="Url" href="{{ url('/sign_up') }}">新規登録</a>
+                <a class="Url" href="{{ url('/sign-up') }}">新規登録</a>
             </li>
 
             <li class="Item">

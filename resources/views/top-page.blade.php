@@ -8,12 +8,11 @@
     </title>
     
     <link rel="stylesheet" href="{{asset('../public/css/body.css')}}">
-    <link rel="stylesheet" href="{{asset('../public/css/top_page.css')}}">
+    <link rel="stylesheet" href="{{asset('../public/css/top-page.css')}}">
 </head>
 
 <body>
-    @component('component.guest_user_header')
-    @endcomponent
+    <x-guest-user-header/>
 
     <main>
     <div class="TopDescription">
@@ -24,7 +23,7 @@
                 <br>
                 ユーザー登録を行い、記事を投稿してみましょう！
             </p>
-            <a href="{{url('/sign_up')}}" class="btn">今すぐユーザー登録を行う</a>
+            <a href="{{url('/sign-up')}}" class="btn">今すぐユーザー登録を行う</a>
         </div>
 
         <img id="setsumei" src="../public/img/sns05.png" width="200" height="200" alt="sns01">
@@ -58,12 +57,7 @@
     <!-- <a href="{{ url('/touroku') }}"><img src="../public/img/wakaba.png" width="100" height="100" alt="初めてご利用の方"></a><br><br> -->
     </main>
     
-    @component('component.footer')
-    @endcomponent
-    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-    <script>
-
-    </script>
+    <x-footer/>
 </body>
 
 </html>

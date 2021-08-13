@@ -12,7 +12,7 @@ class EditReportController extends Controller
     {   
         $datas = Report::where('id', $report_id)->get();
         
-        return view('edit_report', compact("datas"));
+        return view('edit-report', compact("datas"));
     }
     
     public function post(Request $request,$report_id)
@@ -32,6 +32,6 @@ class EditReportController extends Controller
             ]);
         });
         
-        return view('edit_report_result', compact('report_id'));
+        return view('edit-report-result', compact('report_id'));
     }
 }

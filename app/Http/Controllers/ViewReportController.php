@@ -22,6 +22,6 @@ class ViewReportController extends Controller
         
         $datas = Report::with('user')->where('id', $report_id)->get();
 
-        return view('view_report', compact('datas','flag'));
+        return view('view-report', compact('datas','flag'));
     }
 }

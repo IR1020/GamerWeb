@@ -10,7 +10,7 @@ class SignUpController extends Controller
 {
     public function get()
     {
-        return view('sign_up');
+        return view('sign-up');
     }
 
     public function post(Request $request)
@@ -43,6 +43,6 @@ class SignUpController extends Controller
 
         $page_id = $user_id;
 
-        return view('sign_up_result', compact('user_id', 'user_name', 'page_id', 'flag'));
+        return view('sign-up-result', compact('user_id', 'user_name', 'page_id', 'flag'));
     }
 }

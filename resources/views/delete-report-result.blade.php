@@ -23,14 +23,13 @@
     </p>
     @endif
     
-    <a href="{{url('/user_page/'.$page_id)}}">
+    <a href="{{url('/user-page/'.$page_id)}}">
         マイページへ
     </a>
     
     </main>
     
-    @component('component.footer')
-    @endcomponent
+    <x-footer/>
 </body>
 
 </html>
