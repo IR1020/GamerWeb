@@ -1,11 +1,11 @@
-<x-components-head css="guest-user-header"/>
+<x-components-head css="guest-user-header" />
 
 <div class="HeaderElement">
     <div class="HeaderItems">
-        <img class="SiteLogo" src="{{asset('../public/img/logo01.png')}}" width="200" height="50" alt="logoImage01">
+        <a href="{{ url('/') }}"><img class="SiteLogo" src="{{asset('../public/img/logo_1.png')}}" width="200" height="50" alt="logoImage01"></a>
 
         <!-- 検索バー -->
-        <x-search/>
+        <x-search />
 
         <ul class="SignInItemList">
             <li class="SignInItems">
