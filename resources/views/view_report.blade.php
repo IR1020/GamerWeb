@@ -14,16 +14,16 @@
     <main>
         @foreach($datas as $report)
         @if($flag==true)
-        <a href="{{url('/edit-report/'.$report->id)}}">
+        <a href="{{url('/edit_report/'.$report->id)}}">
             記事を編集する
         </a>
 
-        <a href="{{url('/delete-report/'.$report->id)}}">
+        <a href="{{url('/delete_report/'.$report->id)}}">
             記事を削除する
         </a>
         @endif
         
-        <a href="{{url('/user-page/'.$report->user->id)}}">
+        <a href="{{url('/user_page/'.$report->user->id)}}">
             {{$report->user->name}}
         </a>
         

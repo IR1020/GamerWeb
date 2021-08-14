@@ -10,7 +10,7 @@ class DeleteUserController extends Controller
 {
     public function get(Request $request, $user_id)
     {
-        return view('delete-user', compact("user_id"));
+        return view('delete_user', compact("user_id"));
     }
 
     public function post(Request $request, $user_id)
@@ -33,6 +33,6 @@ class DeleteUserController extends Controller
             });
         }
 
-        return view('delete-user-result', compact('page_id', 'flag'));
+        return view('delete_user_result', compact('page_id', 'flag'));
     }
 }

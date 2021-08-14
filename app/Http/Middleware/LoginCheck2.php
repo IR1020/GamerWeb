@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class LoginCheck02
+class LoginCheck2
 {
     /**
      * Handle an incoming request.

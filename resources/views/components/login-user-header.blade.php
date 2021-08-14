@@ -9,11 +9,11 @@
 
         <ul class="SignInItemList">
             <li class="SignInItems">
-                <a class="SignInItemUrls" href="{{ url('/sign_up') }}">新規登録</a>
+                <a class="SignInItemUrls" href="{{ url('/write_report') }}">記事を書く</a>
             </li>
 
             <li class="SignInItems">
-                <a class="SignInItemUrls" href="{{ url('/login') }}">ログイン</a>
+                <a class="SignInItemUrls" href="{{ url('/logout') }}">ログアウト</a>
             </li>
         </ul>
     </div>

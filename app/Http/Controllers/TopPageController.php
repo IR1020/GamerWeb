@@ -8,6 +8,6 @@ class TopPageController extends Controller
 {
     public function get()
     {
-        return view('top-page');
+        return view('top_page');
     }
 }

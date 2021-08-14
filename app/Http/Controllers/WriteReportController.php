@@ -10,7 +10,7 @@ class WriteReportController extends Controller
 {
     public function get()
     {
-        return view('write-report');
+        return view('write_report');
     }
     
     public function post(Request $request)
@@ -35,6 +35,6 @@ class WriteReportController extends Controller
         
         $report_id = Report::latest()->value('id');
         
-        return view('write-report-result', compact('report_id'));
+        return view('write_report_result', compact('report_id'));
     }
 }

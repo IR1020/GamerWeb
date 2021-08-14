@@ -1,4 +1,4 @@
-header{ 
+div.HeaderElement{ 
     background-color: rgb(245, 245, 245);
     position: fixed;
     top: 0px;
@@ -7,28 +7,28 @@ header{
     line-height: 20px;
 }
 
-.HeaderElement{
+.HeaderItems{
     display: flex;
     justify-content: space-around;
 }
 
-img.SiteName{
+img.SiteLogo{
     margin-left: 20px;
 }
 
-ul.SignUpElement{
+ul.SignInItemList{
     display: flex;
     list-style:none;
     top:0px;
     right:2%;
 }
 
-li.Item{
+li.SignInItems{
     white-space: nowrap;
     margin-left: 25px;
 }
 
-a.Url{
+a.SignInItemUrls{
     color:rgb(80, 80, 80);
     font-size: 17px;
     font-weight:bold;
@@ -37,8 +37,8 @@ a.Url{
     cursor: pointer;
 }
 
-a.Url::before,
-a.Url::after {
+a.SignInItemUrls::before,
+a.SignInItemUrls::after {
   width: 0;
   height: 1px;
   background-color: #333;
@@ -47,6 +47,6 @@ a.Url::after {
   transform: translateX(-50%);
 }
 
-a.Url:hover{
+a.SignInItemUrls:hover{
     color: #8f8f8f;
 }

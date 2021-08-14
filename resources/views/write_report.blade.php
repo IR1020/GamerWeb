@@ -18,7 +18,7 @@
     </li>
     @endforeach
 
-    <form action="{{url('/write-report')}}" method="post">
+    <form action="{{url('/write_report')}}" method="post">
         @csrf
         <input type="text" name="report_title" placeholder="記事タイトル"><br><br>
 

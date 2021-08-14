@@ -12,10 +12,9 @@
 
 <body>
     <main>
-
-    <form action="{{url('/delete-report/'.$report_id)}}" method="post">
+    <form action="{{url('/delete_user/'.$user_id)}}" method="post">
         @csrf
-        <p>本当に記事を削除しますか？</p>
+        <p>本当に退会しますか？</p>
         <input type="submit" name="select" value="はい">
         <input type="submit" name="select" value="いいえ"><br>
     </form>

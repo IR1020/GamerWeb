@@ -36,6 +36,6 @@ class LoginController extends Controller
 
         $page_id = $user_id;
 
-        return view('login-result', compact('user_id', 'user_name', 'page_id', 'flag'));
+        return view('login_result', compact('user_id', 'user_name', 'page_id', 'flag'));
     }
 }
