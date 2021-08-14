@@ -5,7 +5,7 @@
         color: #007bff;
         display: flex;
         justify-content: center;
-    };
+    }
     div.DescriptionName {
         display: flex;
         flex-direction: column;
