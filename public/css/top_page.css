@@ -1,34 +1,27 @@
 @charset "utf-8";
 
-@media screen and (max-width: 769px){
+/* @media screen and (max-width: 769px){
     
 }
 
-@media screen and (min-width: 770px) {
-    div.DescriptionElements {
-        padding-top: 130px;
-        color: #007bff;
-        display: flex;
-        justify-content: center;
+@media screen and (min-width: 770px) { */
+    .container{
+        margin-top: 80px;
+        
     }
-    div.DescriptionTextElements {
-        display: flex;
-        flex-direction: column;
-        margin-right: 100px;
-    }
-    h1.DescriptionTitle {
+    h1.description-title{
         font-size: 30px;
+        color: #007bff;
     }
-    p.DescriptionContent {
+    p.description-content {
         color: black;
         font-size: 18px;
-        white-space: nowrap;
     }
-    img.DescriptionServiceImage{
+    img.description-service-image{
         width:200px;
         height:200px;
     }
-    .btn {
+    /* .btn {
         display: flex;
         justify-content: center;
         width: 300px;
@@ -40,5 +33,5 @@
     }
     .btn:hover {
         background-color: #6096fa;
-    }
-}
+    } */
+/* } */

@@ -1,16 +1,30 @@
-div.SearchElement{
-    align-items: flex-end;
+@charset "utf-8";
+@media screen and (max-width: 769px) {
+    div.search-element {
+        align-items: flex-end;
+    }
+    p.search-element-message {
+        display: none;
+    }
+    form.search-container {
+        display: flex;
+        margin-top: -15px;
+    }
 }
 
-p.SearchElementMessage{
-    color: #0049e6;
-    font-weight: bold;
-    font-size: 12px;
-    text-align: left;
-    margin-top: 7px;
-}
-
-form{
-    display: flex;
-    margin-top: -15px;
+@media screen and (min-width: 770px) {
+    div.search-element {
+        align-items: flex-end;
+    }
+    p.search-element-message {
+        color: #0049e6;
+        font-weight: bold;
+        font-size: 12px;
+        text-align: left;
+        margin-top: 7px;
+    }
+    form {
+        display: flex;
+        margin-top: -15px;
+    }
 }

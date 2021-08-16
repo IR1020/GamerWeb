@@ -4,6 +4,6 @@
 </head>
 
 <br><br><br>
-<div class="Footer">
-    <p class="Footer">GamerWeb</p>
-</div>
+<footer class="p-3 text-center ">
+    <p class="site-name">@GamerWeb</p>
+</footer>
