@@ -18,21 +18,15 @@ class DeleteReportController extends Controller
         $select = $request->input('select');
 
         if ($select == "はい") {
-            $flag = true;
-        } else {
-            $flag = false;
-        }
-
-        if ($flag == true) {
             DB::transaction(function () use ($report_id) {
                 Report::where('id', $report_id)->delete();
             });
+            
+            $user_id = $request->session()->get('user_id');
+            
+            return redirect('user_page/'.$user_id);
+        } else {
+            return redirect('view_report/'.$report_id);
         }
-
-        $user_id = $request->session()->get('user_id');
-
-        $page_id = $user_id;
-
-        return view('delete_report_result', compact('page_id', 'flag'));
     }
 }

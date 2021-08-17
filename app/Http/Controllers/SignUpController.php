@@ -41,8 +41,6 @@ class SignUpController extends Controller
         $request->session()->put('user_id', $user_id);
         $request->session()->put('user_name', $user_name);
 
-        $page_id = $user_id;
-
-        return view('sign_up_result', compact('user_id', 'user_name', 'page_id', 'flag'));
+        return redirect('user_page/'.$user_id);
     }
 }

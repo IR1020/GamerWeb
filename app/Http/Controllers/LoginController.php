@@ -26,16 +26,12 @@ class LoginController extends Controller
         $user_id = User::where('name', $user_name)->where('password', $user_password)->value('id');
 
         if ($user_id != null) {
-            $flag = true;
+            $request->session()->put('user_id', $user_id);
+            $request->session()->put('user_name', $user_name);
+            
+            return redirect('user_page/' . $user_id);
         } else {
-            $flag = false;
+            return redirect('login');
         }
-
-        $request->session()->put('user_id', $user_id);
-        $request->session()->put('user_name', $user_name);
-
-        $page_id = $user_id;
-
-        return view('login_result', compact('user_id', 'user_name', 'page_id', 'flag'));
     }
 }

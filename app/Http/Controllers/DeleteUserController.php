@@ -18,21 +18,17 @@ class DeleteUserController extends Controller
         $select = $request->input('select');
 
         if ($select == "はい") {
-            $flag = true;
             $request->session()->forget('user_id');
-            $page_id = null;
-        } else {
-            $flag = false;
-            $user_id = $request->session()->get('user_id');
-            $page_id = $user_id;
-        }
-
-        if ($flag == true) {
+            
             DB::transaction(function () use ($user_id) {
                 User::where('id', $user_id)->delete();
             });
+            
+            return redirect('/');
+        } else {
+            $user_id = $request->session()->get('user_id');
+            
+            return redirect('user_page/'.$user_id);
         }
-
-        return view('delete_user_result', compact('page_id', 'flag'));
     }
 }

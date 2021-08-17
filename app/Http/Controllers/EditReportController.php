@@ -32,6 +32,6 @@ class EditReportController extends Controller
             ]);
         });
         
-        return view('edit_report_result', compact('report_id'));
+        return redirect('view_report/'.$report_id);
     }
 }

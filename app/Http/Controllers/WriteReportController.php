@@ -35,6 +35,6 @@ class WriteReportController extends Controller
         
         $report_id = Report::latest()->value('id');
         
-        return view('write_report_result', compact('report_id'));
+        return redirect('view_report/'.$report_id);
     }
 }
