@@ -1,46 +1,29 @@
-<!DOCTYPE html>
-<html lang="ja">
+@extends('layouts.views_index')
 
-<head>
-    <meta charset="UTF-8">
-    
-    <title>
-        ログイン画面
-    </title>
-    
-    <link rel="stylesheet" href="{{asset('../public/css/body.css')}}">
-</head>
+@section('head')
+<x-views-head title="ログイン" css="sign_up_and_login" />
+@endsection
 
-<body>
-    <main>
+@section('content')
     @foreach ($errors->all() as $error)
     <li>
         {{$error}}
     </li>
     @endforeach
-
-    <p>
-        ユーザー名とパスワードを入力してください。
-    </p>
-
-    <form action="{{url('/login')}}" method="post">
-        @csrf
-        <p>
-            ユーザー名:
-        </p>
-
-        <input type="text" name="user_name">
-
-        <p>
-            パスワード:
-        </p>
-
-        <input type="password" name="user_password">
-
-        <input type="submit" value="ログイン">
-    </form>
-    </main>
     
-    <x-footer/>
-</body>
-</html>
+    <form action="{{url('/login')}}" method="post">
+    @csrf
+    <h1 class="h3 mb-3 fw-normal">ログイン</h1>
+    <div class="form-floating">
+        <input type="text" name="user_name" class="form-control" id="floatingInput" placeholder="名前">
+        <label for="floatingInput">ユーザー名</label>
+    </div>
+    <div class="form-floating">
+        <input type="password" name="user_password" class="form-control" id="floatingPassword" placeholder="パスワード">
+        <label for="floatingPassword">パスワード</label>
+    </div>
+
+    <br>
+    
+    <button class="w-100 btn btn-lg btn-primary" type="submit">送信</button>
+</form>

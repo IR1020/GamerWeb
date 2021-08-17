@@ -4,8 +4,6 @@
 @yield('head')
 
 <body>
-    <x-header />
-
     <main>
         @yield('content')
     </main>
