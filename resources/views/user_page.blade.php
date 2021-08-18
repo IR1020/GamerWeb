@@ -7,17 +7,44 @@
 @section('content')
 <x-header />
 
-<h1>
-    <br>
-    {{$user_name}}
-</h1>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="container">
+                <div class="row">
+                    <p class="card-header text-center rounded-pill">
+                        @foreach($datas as $user)
+                        {{$user->name}}
+                        @endforeach
+                    </p>
+                </div>
+            </div>
+        </div>
 
-<h2>
-    ID:{{$user_id}}
-</h2>
+        <div class="col-md-7 offset-md-1">
+            <div class="container">
+                <div class="row">
+                    <p class="card-header text-center">
+                        新着記事
+                    </p>
+                    @foreach($datas as $user)
+                    @foreach($user->reports as $report)
+                    <div class="card-body border">
+                        <a href="{{ url('/view_report/'.$report->id) }}">
+                            {{$report->title}}
+                        </a>
+                    </div>
+                    @endforeach
+                    @endforeach
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
 
-@if($flag==true)
+    @if($flag==true)
 
-@endif
+    @endif
 
-@endsection
+    @endsection

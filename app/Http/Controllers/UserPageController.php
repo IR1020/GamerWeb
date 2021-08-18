@@ -17,8 +17,8 @@ class UserPageController extends Controller
             $flag = false;
         }
 
-        $user_name = User::where('id', $user_id)->value('name');
+        $datas = User::with('reports')->where('id', $user_id)->get();
 
-        return view('user_page', compact('user_id', 'user_name', 'flag'));
+        return view('user_page', compact('datas', 'flag'));
     }
 }
