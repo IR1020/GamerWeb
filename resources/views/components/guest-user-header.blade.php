@@ -23,35 +23,3 @@
         </div>
     </div>
 </nav>
-
-<!-- <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand">GamerWeb</a>
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="記事を検索" aria-label="Search">
-            <button class="btn btn-outline-primary" type="submit">検索</button>
-        </form>
-    </div>
-</nav>
-
-<div class="header-element">
-    <div class="header-items">
-        <a href="{{ url('/') }}"><img class="site-logo" src="{{asset('../public/img/logo_1.png')}}" alt="logoImage01"></a>
-
-        
-        <form action="{{url('/search_report')}}" method="get">
-            <input class="form-control me-2" name="search_word" type="search" placeholder="記事を検索" aria-label="Search">
-            <button class="btn btn-outline-primary" type="submit">検索</button>
-        </form>
-
-        <ul class="sign-in-item-list">
-            <li class="sign-in-items">
-                <a class="sign-in-item-urls" href="{{ url('/sign_up') }}">新規登録</a>
-            </li>
-
-            <li class="sign-in-items">
-                <a class="sign-in-item-urls" href="{{ url('/login') }}">ログイン</a>
-            </li>
-        </ul>
-    </div>
-</div> -->

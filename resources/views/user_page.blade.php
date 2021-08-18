@@ -5,6 +5,8 @@
 @endsection
 
 @section('content')
+<x-header />
+
 <h1>
     <br>
     {{$user_name}}
@@ -15,21 +17,7 @@
 </h2>
 
 @if($flag==true)
-<a href="{{url('/logout')}}">
-    ログアウト
-</a><br><br>
 
-<a href="{{url('/write_report')}}">
-    記事を投稿する
-</a><br><br>
-
-<a>
-    投稿記事一覧
-</a><br><br>
-
-<a href="{{url('/delete_user/'.$user_id)}}">
-    退会する
-</a>
 @endif
 
 @endsection

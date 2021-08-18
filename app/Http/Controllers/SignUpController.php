@@ -16,8 +16,8 @@ class SignUpController extends Controller
     public function post(Request $request)
     {
         $this->validate($request, [
-            'user_name' => 'required|max:50',
-            'user_password' => 'required|unique:users,password|max:50',
+            'user_name' => 'required|max:20',
+            'user_password' => 'required|unique:users,password|max:20',
         ]);
 
         $user_name = $request->input('user_name');

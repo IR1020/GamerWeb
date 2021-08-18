@@ -8,8 +8,10 @@ use Illuminate\Support\Facades\DB;
 
 class DeleteUserController extends Controller
 {
-    public function get(Request $request, $user_id)
+    public function get(Request $request)
     {
+        $user_id = $request->session()->get('user_id');
+        
         return view('delete_user', compact("user_id"));
     }
 

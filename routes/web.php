@@ -19,7 +19,7 @@ Route::get('/search_report', 'App\Http\Controllers\SearchReportController@get');
 Route::get('/view_report/{report_id}', 'App\Http\Controllers\ViewReportController@get');
 
 Route::group(['middleware' => ['login.check.2']], function () {
-    Route::get('/delete_user/{user_id}', 'App\Http\Controllers\DeleteUserController@get');
+    Route::get('/delete_user', 'App\Http\Controllers\DeleteUserController@get');
     Route::post('/delete_user/{user_id}', 'App\Http\Controllers\DeleteUserController@post');
 
     Route::get('/logout', 'App\Http\Controllers\LogoutController@get');

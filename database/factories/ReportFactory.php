@@ -22,7 +22,7 @@ class ReportFactory extends Factory
     public function definition()
     {
         return [
-            'user_id'=>$this->faker->numberBetween(1,50),
+            'user_id'=>$this->faker->numberBetween(1,200),
             'title'=>$this->faker->realText(100),
             'content'=>$this->faker->realText(),
         ];
