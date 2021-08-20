@@ -1,7 +1,7 @@
 @extends('layouts.views_index')
 
 @section('head')
-<x-views-head title="トップページ" css="top_page" />
+<x-head title="トップページ" css="top_page" />
 @endsection
 
 @section('content')

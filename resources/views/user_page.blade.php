@@ -1,7 +1,7 @@
 @extends('layouts.views_index')
 
 @section('head')
-<x-views-head title="ユーザーページ" css="user_page" />
+<x-head title="ユーザーページ" css="user_page" />
 @endsection
 
 @section('content')
@@ -13,7 +13,8 @@
         <div class="col-md-4">
             <div class="container">
                 <div class="row">
-                    <p class="card-header text-center rounded-pill">
+                    <p class="card-header text-center blue-gradation">
+                        <i class="fas fa-user-circle fa-fw fa-lg"></i>
                         @foreach($datas as $user)
                         {{$user->name}}
                         @endforeach
@@ -25,8 +26,9 @@
         <div class="col-md-7 offset-md-1">
             <div class="container">
                 <div class="row">
-                    <p class="card-header text-center">
-                        新着記事
+                    <p class="card-header text-center blue-gradation">
+                    <i class="fas fa-pencil-alt fa-fw fa-lg"></i>
+                        投稿記事
                     </p>
                     @foreach($datas as $user)
                     @foreach($user->reports as $report)

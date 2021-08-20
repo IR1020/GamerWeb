@@ -1,34 +1,22 @@
-<!DOCTYPE html>
-<html lang="ja">
+@extends('layouts.views_index')
 
-<head>
-    <meta charset="UTF-8">
-    <title>
-        記事投稿画面
-    </title>
-    
-    <link rel="stylesheet" href="{{asset('../public/css/body.css')}}">
-</head>
+@section('head')
+<x-head title="記事投稿" css="write_report" />
+@endsection
 
-<body>
-    <main>
-    @foreach ($errors->all() as $error)
-    <li>
-        {{$error}}
-    </li>
-    @endforeach
+@section('content')
+@foreach ($errors->all() as $error)
+<li>
+    {{$error}}
+</li>
+@endforeach
 
-    <form action="{{url('/write_report')}}" method="post">
-        @csrf
-        <input type="text" name="report_title" placeholder="記事タイトル"><br><br>
+<form action="{{url('/write_report')}}" method="post">
+    @csrf
+    <input type="text" name="report_title" placeholder="タイトル">
 
-        <textarea name="report_content" rows="10" cols="70" placeholder="記事本文"></textarea><br>
+    <textarea name="report_content" rows="10" cols="70" placeholder="記事本文"></textarea>
 
-        <input type="submit" value="投稿"><br>
-    </form>
-    </main>
-
-    <x-footer/>
-</body>
-
-</html>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">投稿</button>
+</form>
+@endsection

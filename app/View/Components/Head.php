@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class ViewsHead extends Component
+class Head extends Component
 {
     public $title;
     public $css;
@@ -27,6 +27,6 @@ class ViewsHead extends Component
      */
     public function render()
     {
-        return view('components.views-head');
+        return view('components.head');
     }
 }

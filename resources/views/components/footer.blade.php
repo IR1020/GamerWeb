@@ -1,8 +1,5 @@
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{asset('../public/css/components/footer.css')}}">
-</head>
+<x-components-head css="footer" />
 
-<footer class="p-3 text-center ">
+<footer class="p-3 text-center  blue-gradation">
     <p class="site-name">@GamerWeb</p>
 </footer>

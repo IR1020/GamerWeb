@@ -1,7 +1,7 @@
 @extends('layouts.views_index')
 
 @section('head')
-<x-views-head title="ログイン" css="sign_up_and_login" />
+<x-head title="ログイン" css="sign_up_and_login" />
 @endsection
 
 @section('content')
