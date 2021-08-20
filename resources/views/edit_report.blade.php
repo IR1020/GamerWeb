@@ -1,36 +1,28 @@
-<!DOCTYPE html>
-<html lang="ja">
+@extends('layouts.views_index')
 
-<head>
-    <meta charset="UTF-8">
-    <title>
-        記事編集画面
-    </title>
+@section('head')
+<x-head title="記事編集" css="write_and_edit_report" />
+@endsection
+
+@section('content')
+@foreach ($errors->all() as $error)
+<li>
+    {{$error}}
+</li>
+@endforeach
+
+@foreach($datas as $report)
+<form action="{{url('/edit_report/'.$report->id)}}" method="post">
+    @csrf
+    <input type="text" name="report_title" class="form-control" value="{{$report->title}}" placeholder="タイトル">
+
+    <br>
     
-    <link rel="stylesheet" href="{{asset('../public/css/body.css')}}">
-</head>
+    <textarea name="report_content" class="form-control" rows="15" cols="80" placeholder="記事本文">{{$report->content}}</textarea>
 
-<body>
-    <main>
-    @foreach ($errors->all() as $error)
-    <li>
-        {{$error}}
-    </li>
-    @endforeach
+    <br>
 
-    @foreach($datas as $report)
-    <form action="{{url('/edit_report/'.$report->id)}}" method="post">
-        @csrf
-        <input type="text" name="report_title" value="{{$report->title}}"><br><br>
-
-        <textarea name="report_content" rows="10" cols="70">{{$report->content}}</textarea><br>
-
-        <input type="submit" value="編集"><br>
-    </form>
-    @endforeach
-    </main>
-
-    <x-footer/>
-</body>
-
-</html>
+    <button class="w-25 btn btn-primary" type="submit">編集</button>
+</form>
+@endforeach
+@endsection

@@ -1,39 +1,54 @@
-<!DOCTYPE html>
-<html lang="ja">
+@extends('layouts.views_index')
 
-<head>
-    <meta charset="UTF-8">
-    <title>
-        記事ページ
-    </title>
+@section('head')
+<x-head title="記事" css="" />
+@endsection
 
-    <link rel="stylesheet" href="{{asset('../public/css/body.css')}}">
-</head>
+@section('content')
+<x-header /><br>
 
-<body>
-    <main>
-        @foreach($datas as $report)
+@foreach($datas as $report)
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <a href="{{url('/user_page/'.$report->user->id)}}">
+                <i class="fas fa-user-circle fa-fw"></i>
+                {{$report->user->name}}
+            </a>
+        </div>
+
+        <div class="col-lg-4">
+            <p>
+                最終更新日：{{$report->updated_at}}
+            </p>
+        </div>
+
+        <h3>
+            {{$report->title}}
+        </h3>
+
         @if($flag==true)
-        <a href="{{url('/edit_report/'.$report->id)}}">
-            記事を編集する
-        </a>
-
-        <a href="{{url('/delete_report/'.$report->id)}}">
-            記事を削除する
-        </a>
+        <div class="flex-row">
+            <a href="{{url('/edit_report/'.$report->id)}}">
+                <i class="far fa-edit fa-fw"></i>
+                記事を編集する
+            </a>
+            <a href="{{url('/delete_report/'.$report->id)}}">
+                <i class="far fa-trash-alt fa-fw"></i>
+                記事を削除する
+            </a>
+        </div>
         @endif
         
-        <a href="{{url('/user_page/'.$report->user->id)}}">
-            {{$report->user->name}}
-        </a>
-        
-        {{$report->user->id}}
-        {{$report->title}}
-        {{$report->content}}
+        <p>
+            <br>
+            {{$report->content}}
+        </p>
         @endforeach
-    </main>
 
-    <x-footer/>
-</body>
+    </div>
+</div>
 
-</html>
+<x-footer />
+
+@endsection

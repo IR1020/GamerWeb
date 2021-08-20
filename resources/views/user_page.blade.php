@@ -5,9 +5,8 @@
 @endsection
 
 @section('content')
-<x-header />
+<x-header /><br>
 
-<br>
 <div class="container">
     <div class="row">
         <div class="col-md-4">
@@ -27,7 +26,7 @@
             <div class="container">
                 <div class="row">
                     <p class="card-header text-center blue-gradation">
-                    <i class="fas fa-pencil-alt fa-fw fa-lg"></i>
+                        <i class="fas fa-pencil-alt fa-fw fa-lg"></i>
                         投稿記事
                     </p>
                     @foreach($datas as $user)
@@ -44,9 +43,12 @@
             </div>
         </div>
     </div>
+</div>
 
-    @if($flag==true)
+@if($flag==true)
 
-    @endif
+@endif
 
-    @endsection
+<x-footer />
+
+@endsection

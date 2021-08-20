@@ -8,9 +8,8 @@
 @endsection
 
 @section('content')
-<x-header />
+<x-header /><br>
 
-<br>
 <div class="container">
     <div class="row">
         @foreach($search_results as $search_result)
@@ -46,4 +45,6 @@
 <div class="d-flex justify-content-center pagination">
     {{$search_results->links()}}
 </div>
+
+<br><x-footer/>
 @endsection
