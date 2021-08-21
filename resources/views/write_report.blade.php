@@ -11,7 +11,7 @@
 </li>
 @endforeach
 
-<form action="{{url('/write_report')}}" method="post">
+<form class="col-md-8 offset-md-2 col-10 offset-1" action="{{url('/write_report')}}" method="post">
     @csrf
     <input type="text" name="report_title" class="form-control" placeholder="タイトル">
     
@@ -23,4 +23,4 @@
 
     <button class="w-25 btn btn-primary" type="submit">投稿</button>
 </form>
-@endsection
+@endsection('content')

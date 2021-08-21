@@ -12,7 +12,7 @@
 @endforeach
 
 @foreach($datas as $report)
-<form action="{{url('/edit_report/'.$report->id)}}" method="post">
+<form class="col-md-8 offset-md-2 col-10 offset-1" action="{{url('/edit_report/'.$report->id)}}" method="post">
     @csrf
     <input type="text" name="report_title" class="form-control" value="{{$report->title}}" placeholder="タイトル">
 
@@ -25,4 +25,4 @@
     <button class="w-25 btn btn-primary" type="submit">編集</button>
 </form>
 @endforeach
-@endsection
+@endsection('content')

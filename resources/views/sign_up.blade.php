@@ -11,20 +11,17 @@
 </li>
 @endforeach
 
-<form action="{{url('/sign_up')}}" method="post">
+<form class="col-md-4 offset-md-4 col-8 offset-2" action="{{url('/sign_up')}}" method="post">
     @csrf
     <h1 class="h3 mb-3 fw-normal">ユーザー登録</h1>
     <div class="form-floating">
         <input type="text" name="user_name" class="form-control" id="floatingInput" placeholder="名前">
         <label for="floatingInput">ユーザー名</label>
-    </div>
+    </div><br>
     <div class="form-floating">
         <input type="password" name="user_password" class="form-control" id="floatingPassword" placeholder="パスワード">
         <label for="floatingPassword">パスワード</label>
-    </div>
-
-    <br>
-    
-    <button class="w-100 btn btn-lg btn-primary" type="submit">送信</button>
+    </div><br>
+    <button class="w-15 btn btn-primary" type="submit">送信</button>
 </form>
-@endsection
+@endsection('content')

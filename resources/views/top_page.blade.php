@@ -5,8 +5,6 @@
 @endsection
 
 @section('content')
-<x-header />
-
 <div class="container">
     <div class="row">
         <div class="box-1 col-md-4 offset-md-2">
@@ -26,8 +24,5 @@
             <img class="description-service-image" src="{{asset('../public/img/service_image_1.png')}}" alt="service_image_1">
         </div>
     </div>
-</div><br><br>
-
-<x-footer />
-
+</div>
 @endsection

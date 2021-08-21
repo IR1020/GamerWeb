@@ -5,3 +5,12 @@
     background: linear-gradient(90deg, rgba(1, 168, 201, 1) 0%, rgba(11, 11, 181, 1) 35%, rgba(10, 4, 106, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#01a8c9", endColorstr="#0a046a", GradientType=1);
 }
+
+p.blue-gradation {
+    color:rgb(211, 229, 255);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+div.blue-gradation {
+    color:white;
+}

@@ -5,13 +5,11 @@
 @endsection
 
 @section('content')
-<x-header /><br>
-
 @foreach($datas as $report)
 <div class="container">
     <div class="row">
         <div class="col-lg-8">
-            <a href="{{url('/user_page/'.$report->user->id)}}">
+            <a class="fw-bold text-secondary text-decoration-none" href="{{url('/user_page/'.$report->user->id)}}">
                 <i class="fas fa-user-circle fa-fw"></i>
                 {{$report->user->name}}
             </a>
@@ -19,7 +17,7 @@
 
         <div class="col-lg-4">
             <p>
-                最終更新日：{{$report->updated_at}}
+                最終更新日：{{$report->updated_at->format('Y年m月d日')}}
             </p>
         </div>
 
@@ -48,7 +46,4 @@
 
     </div>
 </div>
-
-<x-footer />
-
 @endsection

@@ -5,8 +5,6 @@
 @endsection
 
 @section('content')
-<x-header /><br>
-
 <div class="container">
     <div class="row">
         <div class="col-md-4">
@@ -32,14 +30,13 @@
                     @foreach($datas as $user)
                     @foreach($user->reports as $report)
                     <div class="card-body border">
-                        <a href="{{ url('/view_report/'.$report->id) }}">
+                        <a class="fw-bold text-reset text-decoration-none" href="{{ url('/view_report/'.$report->id) }}">
                             {{$report->title}}
                         </a>
                     </div>
                     @endforeach
                     @endforeach
                 </div>
-                <br>
             </div>
         </div>
     </div>
@@ -48,7 +45,5 @@
 @if($flag==true)
 
 @endif
-
-<x-footer />
 
 @endsection
