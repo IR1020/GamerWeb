@@ -17,12 +17,12 @@
     <div class="form-floating">
         <input type="text" name="user_name" class="form-control" id="floatingInput" placeholder="名前">
         <label for="floatingInput">ユーザー名</label>
-    </div><br>
-    <div class="form-floating">
+    </div>
+    <div class="form-floating mt-3">
         <input type="password" name="user_password" class="form-control" id="floatingPassword" placeholder="パスワード">
         <label for="floatingPassword">パスワード</label>
-    </div><br>
+    </div>
     
-    <button class="w-15 btn btn-primary" type="submit">送信</button>
+    <button class="w-15 btn btn-primary mt-3" type="submit">送信</button>
 </form>
 @endsection('content')

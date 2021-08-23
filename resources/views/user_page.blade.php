@@ -32,8 +32,8 @@
                         </a>
                     </div>
                     @endforeach
-                </div><br>
-                <div class="d-flex justify-content-center pagination">
+                </div>
+                <div class="d-flex justify-content-center pagination mt-3">
                     {{$datas->links()}}
                 </div>
             </div>

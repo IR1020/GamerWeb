@@ -31,7 +31,7 @@
     </div>
 </div>
 
-<div class="d-flex justify-content-center pagination">
+<div class="d-flex justify-content-center pagination mt-3">
     {{$datas->links()}}
 </div>
 @endsection

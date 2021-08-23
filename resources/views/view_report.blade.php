@@ -38,8 +38,7 @@
         </div>
         @endif
         
-        <p>
-            <br>
+        <p class="mt-4">
             {{$report->content}}
         </p>
         @endforeach

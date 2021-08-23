@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html lang="ja">
+@extends('layouts.views_index')
 
-<head>
-    <meta charset="UTF-8">
-    <title>
-        記事削除画面
-    </title>
-    
-    <link rel="stylesheet" href="{{asset('../public/css/body.css')}}">
-</head>
+@section('head')
+<x-head title="退会" css="delete" />
+@endsection
 
-<body>
-    <main>
-    <form action="{{url('/delete_user/'.$user_id)}}" method="post">
-        @csrf
-        <p>本当に退会しますか？</p>
-        <input type="submit" name="select" value="はい">
-        <input type="submit" name="select" value="いいえ"><br>
-    </form>
-    </main>
-
-    <x-footer/>
-</body>
-
-</html>
+@section('content')
+<form class="container" action="{{url('/delete_user/'.$user_id)}}" method="post">
+    @csrf
+    <p class="h6 mt-4">本当に退会しますか？</p>
+    <p class="text-danger h6">※退会すると投稿した記事は全て消えます。</p>
+    <input class="mt-4" type="radio" name="select" value="はい">はい</button>
+    <input class="mt-4 ms-4" type="radio" name="select" value="いいえ">いいえ</button><br>
+    <input class="btn btn-primary w-15 mt-3" type="submit">
+</form>
+@endsection('content')

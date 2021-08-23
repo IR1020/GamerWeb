@@ -12,16 +12,16 @@
                 <h1 class="h2 text-light description-title">
                     ここは、あなたが営むゲームメディア
                 </h1>
-                <p class="text-light description-content">
+                <p class="text-light description-content mb-4">
                     GamerWebは、他者とゲーム情報を共有するアプリです。
                     ユーザー登録を行い、記事を投稿してみましょう！
-                </p><br>
+                </p>
             </div>
         </div>
     </div>
-</div><br>
+</div>
 
-<div class="container">
+<div class="container mt-3">
     <div class="row">
         @foreach($datas as $report)
         <div class="card-body border">
@@ -42,9 +42,9 @@
         </div>
         @endforeach
     </div>
-</div><br>
+</div>
 
-<div class="d-flex justify-content-center pagination">
+<div class="d-flex justify-content-center pagination mt-3">
     {{$datas->links()}}
 </div>
 
