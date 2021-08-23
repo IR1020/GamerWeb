@@ -1,25 +1,20 @@
 @charset "utf-8";
-@media screen and (max-width: 767px) {
-    div.box-1 {
-        text-align: center;
-    }
-    div.box-2 {
-        margin-top: 10%;
-        text-align: center;
+@media screen and (max-width:767px) {
+    /*　画面サイズが767px以下の場合読み込む　*/
+    .pagination {
+        flex-wrap: wrap;
     }
 }
 
-div.container {
-    margin-top: 80px;
+.box1 {
+    margin-top: -5vh;
 }
 
 h1.description-title {
-    font-size: 30px;
-    color: #007bff;
+    margin-top: 5vh;
 }
 
 p.description-content {
-    color: black;
     font-size: 18px;
 }
 

@@ -21,9 +21,7 @@
     <div class="form-floating">
         <input type="password" name="user_password" class="form-control" id="floatingPassword" placeholder="パスワード">
         <label for="floatingPassword">パスワード</label>
-    </div>
-
-    <br>
+    </div><br>
     
     <button class="w-15 btn btn-primary" type="submit">送信</button>
 </form>

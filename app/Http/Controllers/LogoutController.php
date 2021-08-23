@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Report;
 use Illuminate\Http\Request;
 
 class LogoutController extends Controller
@@ -10,6 +11,8 @@ class LogoutController extends Controller
     {
         $request->session()->forget('user_id');
         
-        return view('top_page');
+        $datas = Report::with('user')->orderBy('created_at', 'desc')->paginate(10);
+        
+        return view('top_page', compact('datas'));
     }
 }

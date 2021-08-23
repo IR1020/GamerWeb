@@ -14,6 +14,8 @@ Route::group(['middleware' => ['login.check.1']], function () {
 
 Route::get('/user_page/{user_id}', 'App\Http\Controllers\UserPageController@get')->name('user_page');
 
+Route::get('/logout', 'App\Http\Controllers\LogoutController@get');
+
 Route::get('/search_report', 'App\Http\Controllers\SearchReportController@get');
 
 Route::get('/view_report/{report_id}', 'App\Http\Controllers\ViewReportController@get');
@@ -21,8 +23,6 @@ Route::get('/view_report/{report_id}', 'App\Http\Controllers\ViewReportControlle
 Route::group(['middleware' => ['login.check.2']], function () {
     Route::get('/delete_user', 'App\Http\Controllers\DeleteUserController@get');
     Route::post('/delete_user/{user_id}', 'App\Http\Controllers\DeleteUserController@post');
-
-    Route::get('/logout', 'App\Http\Controllers\LogoutController@get');
 
     Route::get('/write_report', 'App\Http\Controllers\WriteReportController@get');
     Route::post('/write_report', 'App\Http\Controllers\WriteReportController@post');

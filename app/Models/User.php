@@ -19,6 +19,6 @@ class User extends Model
     
     public function reports()
     {
-        return $this->hasMany(Report::class);
+        return $this->hasMany(Report::class)->orderBy('created_at', 'desc');
     }
 }

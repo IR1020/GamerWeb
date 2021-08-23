@@ -11,8 +11,8 @@ class SearchReportController extends Controller
     {
         $search_word = $request->input('search_word');
 
-        $search_results = Report::with('user')->where('title', 'like', '%' . $search_word . '%')->orWhere('content', 'like', '%' . $search_word . '%')->paginate(10);
+        $datas = Report::with('user:id,name')->where('title', 'like', '%' . $search_word . '%')->orWhere('content', 'like', '%' . $search_word . '%')->select('user_id','id','title','created_at')->orderBy('created_at', 'desc')->paginate(10);
 
-        return view('search_report_result', compact('search_results'));
+        return view('search_report_result', compact('datas'));
     }
 }

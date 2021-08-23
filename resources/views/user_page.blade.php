@@ -7,41 +7,39 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-5">
             <div class="container">
                 <div class="row">
                     <p class="card-header text-center blue-gradation">
                         <i class="fas fa-user-circle fa-fw fa-lg"></i>
-                        @foreach($datas as $user)
-                        {{$user->name}}
-                        @endforeach
+                        {{$user_name}}
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-7 offset-md-1">
+        <div class="col-md-7">
             <div class="container">
                 <div class="row">
                     <p class="card-header text-center blue-gradation">
                         <i class="fas fa-pencil-alt fa-fw fa-lg"></i>
                         投稿記事
                     </p>
-                    @foreach($datas as $user)
-                    @foreach($user->reports as $report)
+                    @foreach($datas as $report)
                     <div class="card-body border">
                         <a class="fw-bold text-reset text-decoration-none" href="{{ url('/view_report/'.$report->id) }}">
                             {{$report->title}}
                         </a>
                     </div>
                     @endforeach
-                    @endforeach
+                </div><br>
+                <div class="d-flex justify-content-center pagination">
+                    {{$datas->links()}}
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 @if($flag==true)
 
 @endif
