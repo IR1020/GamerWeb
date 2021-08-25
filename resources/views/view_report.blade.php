@@ -38,6 +38,9 @@
         </div>
         @endif
         
+        <x-good-report :id='$report->id'/>
+
+        
         <p class="mt-4">
             {{$report->content}}
         </p>

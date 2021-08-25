@@ -32,4 +32,7 @@ Route::group(['middleware' => ['login.check.2']], function () {
 
     Route::get('/delete_report/{report_id}', 'App\Http\Controllers\DeleteReportController@get');
     Route::post('/delete_report/{report_id}', 'App\Http\Controllers\DeleteReportController@post');
+    
+    Route::get('/add_good/{user_id}/{report_id}', 'App\Http\Controllers\GoodController@add');
+    Route::get('/delete_good/{user_id}/{report_id}', 'App\Http\Controllers\GoodController@delete');
 });

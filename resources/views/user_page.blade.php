@@ -7,13 +7,14 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-5 mb-4">
             <div class="container">
-                <div class="row">
-                    <p class="card-header text-center blue-gradation">
-                        <i class="fas fa-user-circle fa-fw fa-lg"></i>
+                <div class="row card-body border border-2 shadow-sm rounded">
+                    <p>
+                    <i class="fas fa-user-circle fa-fw fa-lg"></i>
                         {{$user_name}}
                     </p>
+                    <p>記事数：{{$count_report}}</p>
                 </div>
             </div>
         </div>
