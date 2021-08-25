@@ -23,11 +23,13 @@ class UserPageController extends Controller
         $count_report = Report::whereHas('user', function ($query) use ($user_id) {
             $query->where('id', $user_id);
         })->count('id');
-
+        
+        $popular_reports = Report::withCount('goods')->where('user_id',$user_id)->orderBy('goods_count', 'desc')->limit(3)->get();
+        
         $datas = Report::whereHas('user', function ($query) use ($user_id) {
             $query->where('id', $user_id);
         })->orderBy('created_at', 'desc')->paginate(10);;
 
-        return view('user_page', compact('user_name','count_report', 'datas', 'flag'));
+        return view('user_page', compact('flag','user_name','count_report','popular_reports','datas'));
     }
 }

@@ -18,8 +18,8 @@ class Report extends Model
         return $this->belongsTo(User::class);
     }
     
-    public function good()
+    public function goods()
     {
-        return $this->belongsTo(Good::class);
+        return $this->hasMany(Good::class);
     }
 }

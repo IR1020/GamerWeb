@@ -14,8 +14,8 @@ class Good extends Model
         'report_id',
     ];
     
-    public function reports()
+    public function report()
     {
-        return $this->hasMany(Report::class);
+        return $this->belongsTo(Report::class);
     }
 }
