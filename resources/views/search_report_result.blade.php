@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="ja">
-
 @extends('layouts.views_index')
 
 @section('head')

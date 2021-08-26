@@ -22,20 +22,23 @@
                     <p class="card-header text-center border border-2 rounded-top"><i class="fas fa-crown fa-fw text-warning"></i>
                         人気記事
                     </p>
-
+                    @if($count_report==0)
+                    <p class="card-body border border-2 rounded-bottom">記事はありません。</p>
+                    @else
                     <?php $i = 1; ?>
-                    
+
                     <div class="border border-2 rounded-bottom">
-                    @foreach($popular_reports as $report)
-                    <div class="mt-2 mb-2 d-flex flex-row">
-                        <img src="{{asset('../public/img/rank_'.$i.'.png')}}" width="40" height="30" alt="rank_{{$i}}">
-                        <a class="mt-2 ms-2 fw-bold text-reset text-decoration-none" href="{{ url('/view_report/'.$report->id) }}">
-                            {{$report->title}}
-                        </a>
-                        <?php $i++; ?>
+                        @foreach($popular_reports as $report)
+                        <div class="mt-2 mb-2 d-flex flex-row">
+                            <img src="{{asset('../public/img/rank_'.$i.'.png')}}" width="40" height="30" alt="rank_{{$i}}">
+                            <a class="mt-2 ms-2 fw-bold text-reset text-decoration-none" href="{{ url('/view_report/'.$report->id) }}">
+                                {{$report->title}}
+                            </a>
+                            <?php $i++; ?>
+                        </div>
+                        @endforeach
                     </div>
-                    @endforeach
-                    </div>
+                    @endif
                 </div>
             </div>
         </div>
@@ -47,6 +50,9 @@
                         <i class="fas fa-pencil-alt fa-fw fa-lg"></i>
                         新着記事
                     </p>
+                    @if($count_report==0)
+                    <p class="card-body border border-2 rounded-bottom">記事はありません。</p>
+                    @else
                     @foreach($datas as $report)
                     <div class="card-body border">
                         <a class="fw-bold text-reset text-decoration-none" href="{{ url('/view_report/'.$report->id) }}">
@@ -54,6 +60,7 @@
                         </a>
                     </div>
                     @endforeach
+                    @endif
                 </div>
                 <div class="d-flex justify-content-center pagination mt-3">
                     {{$datas->links()}}

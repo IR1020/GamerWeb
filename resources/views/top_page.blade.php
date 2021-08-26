@@ -10,10 +10,10 @@
         <div class="row">
             <div class="box">
                 <h1 class="h2 text-light description-title">
-                    ここは、あなたが営むゲームメディア
+                make a game media!
                 </h1>
                 <p class="text-light description-content mb-4">
-                    GamerWebは、他者とゲーム情報を共有するアプリです。
+                    GamerWebは、ゲーム情報を発信するアプリです。
                     ユーザー登録を行い、記事を投稿してみましょう！
                 </p>
             </div>

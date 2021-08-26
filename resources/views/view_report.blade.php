@@ -6,16 +6,16 @@
 
 @section('content')
 @foreach($datas as $report)
-<div class="container">
+<div class="container col-lg-8 offset-lg-2">
     <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-7">
             <a class="fw-bold text-secondary text-decoration-none" href="{{url('/user_page/'.$report->user->id)}}">
                 <i class="fas fa-user-circle fa-fw"></i>
                 {{$report->user->name}}
             </a>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-5">
             <p>
                 最終更新日：{{$report->updated_at->format('Y年m月d日')}}
             </p>
