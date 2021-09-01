@@ -25,12 +25,12 @@
                     @if($count_report==0)
                     <p class="card-body border border-2 rounded-bottom">記事はありません。</p>
                     @else
+                    
                     <?php $i = 1; ?>
-
                     <div class="border border-2 rounded-bottom">
                         @foreach($popular_reports as $report)
                         <div class="mt-2 mb-2 d-flex flex-row">
-                            <img src="{{asset('../public/img/rank_'.$i.'.png')}}" width="40" height="30" alt="rank_{{$i}}">
+                            <img src="{{asset('img/rank_'.$i.'.png')}}" width="40" height="30" alt="rank_{{$i}}">
                             <a class="mt-2 ms-2 fw-bold text-reset text-decoration-none" href="{{ url('/view_report/'.$report->id) }}">
                                 {{$report->title}}
                             </a>
@@ -69,8 +69,5 @@
         </div>
     </div>
 </div>
-@if($flag==true)
-
-@endif
 
 @endsection
