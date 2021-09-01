@@ -1,8 +1,8 @@
 .blue-gradation {
     background: rgb(1, 168, 201);
-    background: -moz-linear-gradient(315deg, rgba(1, 168, 201, 1) 0%, rgba(11, 11, 181, 1) 65%, rgba(10, 4, 106, 1) 100%);
-    background: -webkit-linear-gradient(315deg, rgba(1, 168, 201, 1) 0%, rgba(11, 11, 181, 1) 65%, rgba(10, 4, 106, 1) 100%);
-    background: linear-gradient(315deg, rgba(1, 168, 201, 1) 0%, rgba(11, 11, 181, 1) 65%, rgba(10, 4, 106, 1) 100%);
+    background: -moz-linear-gradient(270deg, rgba(1, 168, 201, 1) 0%, rgba(11, 11, 181, 1) 65%, rgba(10, 4, 106, 1) 100%);
+    background: -webkit-linear-gradient(270deg, rgba(1, 168, 201, 1) 0%, rgba(11, 11, 181, 1) 65%, rgba(10, 4, 106, 1) 100%);
+    background: linear-gradient(270deg, rgba(1, 168, 201, 1) 0%, rgba(11, 11, 181, 1) 65%, rgba(10, 4, 106, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#01a8c9", endColorstr="#0a046a", GradientType=1);
 }
 
