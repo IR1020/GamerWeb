@@ -1,5 +1,9 @@
 <?php
 
+if(config('app.env')==='production'){
+    URL::forceScheme('https');
+}
+
 use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => ['login.check.1']], function () {
